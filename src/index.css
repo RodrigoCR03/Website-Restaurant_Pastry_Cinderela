@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #2A3F54;
+  --secondary: #E6C67A;
+  --light: #F8F4E3;
+  --dark: #1A2A3A;
+  --accent: #D4AF37;
+}
+
+/* Custom Cursor Styles */
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  background: rgba(230, 198, 122, 0.4);
+  border: 2px solid #E6C67A;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.2s ease;
+  transform: translate(-50%, -50%);
+}
+
+.custom-cursor.hover {
+  transform: translate(-50%, -50%) scale(1.5);
+  background: rgba(230, 198, 122, 0.2);
+}
+
+/* Hide default cursor when custom cursor is active */
+body.custom-cursor-active {
+  cursor: none;
+}
+
+body.custom-cursor-active a,
+body.custom-cursor-active button,
+body.custom-cursor-active input,
+body.custom-cursor-active [role="button"] {
+  cursor: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: var(--light);
+}
+
+.hero-pattern {
+  background-color: var(--primary);
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e6c67a' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#2A3F54] text-white px-6 py-3 rounded-md hover:bg-[#1A2A3A] transition-colors duration-300 font-medium;
+  }
+  
+  .btn-secondary {
+    @apply bg-[#E6C67A] text-[#2A3F54] px-6 py-3 rounded-md hover:bg-[#D4AF37] transition-colors duration-300 font-medium;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-[#2A3F54] mb-6 relative inline-block;
+  }
+  
+  .section-title::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-1/2 h-1 bg-[#E6C67A];
+  }
+}

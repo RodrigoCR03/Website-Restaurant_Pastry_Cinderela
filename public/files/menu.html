@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Completo - Restaurante Cinderela</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #D4AF37;
+            padding-bottom: 20px;
+        }
+        h1 {
+            color: #1C2E4A;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #1C2E4A;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #D4AF37;
+            padding-bottom: 8px;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            border-bottom: 1px dotted #ccc;
+            padding-bottom: 10px;
+        }
+        .item-name {
+            font-weight: bold;
+            color: #1C2E4A;
+        }
+        .item-desc {
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .item-price {
+            font-weight: bold;
+            color: #D4AF37;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+        }
+        .print-button {
+            display: inline-block;
+            background-color: #1C2E4A;
+            color: #D4AF37;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+        .print-button:hover {
+            background-color: #2A4268;
+        }
+        @media print {
+            .print-button {
+                display: none;
+            }
+            body {
+                font-size: 12pt;
+            }
+            .container {
+                width: 100%;
+                max-width: 100%;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Restaurante Cinderela</h1>
+            <p>Autêntica Cozinha Portuguesa</p>
+            <button class="print-button" onclick="window.print();">Imprimir Menu</button>
+        </header>
+
+        <h2>Entradas</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Caldo Camarão</div>
+                    <div class="item-desc">Caldo tradicional de camarão</div>
+                </div>
+                <div class="item-price">€3.80</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Sopa Alentejana</div>
+                    <div class="item-desc">Sopa tradicional da região do Alentejo</div>
+                </div>
+                <div class="item-price">€2.50</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Queijo da Serra com Tostinhas</div>
+                    <div class="item-desc">Queijo da Serra com tostas</div>
+                </div>
+                <div class="item-price">€10.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Prato de Caracóis</div>
+                    <div class="item-desc">Prato de caracóis cozinhados com ervas e alho</div>
+                </div>
+                <div class="item-price">€7.50</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Travessa de Caracoletas</div>
+                    <div class="item-desc">Travessa de caracoletas grandes (12 unidades)</div>
+                </div>
+                <div class="item-price">€15.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Pica-Pau</div>
+                    <div class="item-desc">Pequenos pedaços de carne com pickles</div>
+                </div>
+                <div class="item-price">€10.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Prato de Presunto</div>
+                    <div class="item-desc">Prato de presunto</div>
+                </div>
+                <div class="item-price">€10.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Tábua de Presunto com Queijo</div>
+                    <div class="item-desc">Tábua com presunto e queijo</div>
+                </div>
+                <div class="item-price">€15.00</div>
+            </div>
+        </div>
+
+        <h2>Snacks</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Camarão Cozido</div>
+                    <div class="item-desc">Camarão cozido</div>
+                </div>
+                <div class="item-price">€17.50</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Pica-Pau</div>
+                    <div class="item-desc">Pequenos pedaços de carne com pickles</div>
+                </div>
+                <div class="item-price">€10.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Prato de Presunto</div>
+                    <div class="item-desc">Prato de presunto</div>
+                </div>
+                <div class="item-price">€10.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Prego no Pão</div>
+                    <div class="item-desc">Prego no pão</div>
+                </div>
+                <div class="item-price">€5.50</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Ovos Mexidos com Tomate e Cogumelos</div>
+                    <div class="item-desc">Ovos mexidos com tomate e cogumelos</div>
+                </div>
+                <div class="item-price">€9.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Fatia de Queijo da Serra</div>
+                    <div class="item-desc">Fatia de queijo da Serra</div>
+                </div>
+                <div class="item-price">€7.50</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Panado de Porco no Pão</div>
+                    <div class="item-desc">Panado de porco no pão</div>
+                </div>
+                <div class="item-price">€4.50</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Prego Especial com Queijo e Bacon</div>
+                    <div class="item-desc">Prego especial com queijo e bacon</div>
+                </div>
+                <div class="item-price">€8.50</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Moelas com Pickles</div>
+                    <div class="item-desc">Moelas com pickles</div>
+                </div>
+                <div class="item-price">€10.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Bifana no Pão</div>
+                    <div class="item-desc">Bifana no pão</div>
+                </div>
+                <div class="item-price">€4.50</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Tábua de Presunto com Queijo</div>
+                    <div class="item-desc">Tábua com presunto e queijo</div>
+                </div>
+                <div class="item-price">€15.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Tosta Mista</div>
+                    <div class="item-desc">Tosta mista de fiambre e queijo</div>
+                </div>
+                <div class="item-price">€5.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Camarão à Guilho</div>
+                    <div class="item-desc">Camarão ao alho</div>
+                </div>
+                <div class="item-price">€17.50</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Camarão à Plancha</div>
+                    <div class="item-desc">Camarão grelhado</div>
+                </div>
+                <div class="item-price">€25.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Ovos Mexidos com Farinheira</div>
+                    <div class="item-desc">Ovos mexidos com farinheira</div>
+                </div>
+                <div class="item-price">€9.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Chouriço Assado</div>
+                    <div class="item-desc">Chouriço assado</div>
+                </div>
+                <div class="item-price">€8.50</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Prato de Caracóis</div>
+                    <div class="item-desc">Prato de caracóis cozinhados com ervas e alho</div>
+                </div>
+                <div class="item-price">€7.50</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Travessa de Caracoletas</div>
+                    <div class="item-desc">Travessa de caracoletas grandes (12 unidades)</div>
+                </div>
+                <div class="item-price">€15.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Morcela Assada com Ananás</div>
+                    <div class="item-desc">Morcela assada com ananás</div>
+                </div>
+                <div class="item-price">€9.00</div>
+            </div>
+        </div>
+
+        <h2>Peixes</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Bacalhau à Chefe</div>
+                    <div class="item-desc">Bacalhau preparado à moda do chef</div>
+                </div>
+                <div class="item-price">€20.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Bacalhau à Lagareiro</div>
+                    <div class="item-desc">Bacalhau grelhado com azeite e alho</div>
+                </div>
+                <div class="item-price">€20.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Douradinha Grelhada</div>
+                    <div class="item-desc">Dourada grelhada</div>
+                </div>
+                <div class="item-price">€18.50</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Lombinhos de Peixe com Arroz</div>
+                    <div class="item-desc">Lombinhos de peixe com arroz</div>
+                </div>
+                <div class="item-price">€16.50</div>
+            </div>
+        </div>
+
+        <h2>Omeletes</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Omelete de Chouriço</div>
+                    <div class="item-desc">Omelete com chouriço</div>
+                </div>
+                <div class="item-price">€18.50</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Omelete Mista</div>
+                    <div class="item-desc">Omelete com queijo, presunto e cogumelos</div>
+                </div>
+                <div class="item-price">€15.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Omelete de Presunto</div>
+                    <div class="item-desc">Omelete com presunto</div>
+                </div>
+                <div class="item-price">€16.00</div>
+            </div>
+        </div>
+
+        <h2>Carnes</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Bife de Vitela à Portuguesa</div>
+                    <div class="item-desc">Bife de vitela à portuguesa</div>
+                </div>
+                <div class="item-price">€20.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Bife à Cinderela</div>
+                    <div class="item-desc">Bife com champignon</div>
+                </div>
+                <div class="item-price">€19.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Bitoque</div>
+                    <div class="item-desc">Bife com ovo estrelado</div>
+                </div>
+                <div class="item-price">€13.50</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Escalopes Panados com Batata Frita</div>
+                    <div class="item-desc">Escalopes panados com batata frita</div>
+                </div>
+                <div class="item-price">€17.50</div>
+            </div>
+        </div>
+
+        <h2>Buffet</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Buffet Adolescente (até 8 anos)</div>
+                    <div class="item-desc">Buffet para adolescentes (até 8 anos)</div>
+                </div>
+                <div class="item-price">€10.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Buffet Adulto</div>
+                    <div class="item-desc">Buffet para adultos</div>
+                </div>
+                <div class="item-price">€14.90</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Buffet Sobremesa</div>
+                    <div class="item-desc">Buffet de sobremesas variadas</div>
+                </div>
+                <div class="item-price">€3.50</div>
+            </div>
+        </div>
+
+        <h2>Bebidas</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Sumo Natural</div>
+                    <div class="item-desc">Sumo natural de fruta</div>
+                </div>
+                <div class="item-price">€3.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Caneca de Cerveja</div>
+                    <div class="item-desc">Caneca de cerveja</div>
+                </div>
+                <div class="item-price">€3.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Imperial/Fino</div>
+                    <div class="item-desc">Cerveja de pressão</div>
+                </div>
+                <div class="item-price">€1.40</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Copo de Vinho</div>
+                    <div class="item-desc">Copo de vinho da casa</div>
+                </div>
+                <div class="item-price">€1.80</div>
+            </div>
+        </div>
+
+        <h2>Queijos</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Queijo da Serra com Tostinhas</div>
+                    <div class="item-desc">Queijo da Serra acompanhado com tostas</div>
+                </div>
+                <div class="item-price">€10.00</div>
+            </div>
+        </div>
+
+        <h2>Vinhos Recomendados</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Barca Velha Legado (Douro)</div>
+                    <div class="item-desc">Vinho tinto premium do Douro</div>
+                </div>
+                <div class="item-price">€890.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Pêra Manca (Alentejo)</div>
+                    <div class="item-desc">Vinho tinto premium do Alentejo</div>
+                </div>
+                <div class="item-price">€595.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Quinta das Carvalhas V. Velhas (Douro)</div>
+                    <div class="item-desc">Vinho tinto de vinhas velhas do Douro</div>
+                </div>
+                <div class="item-price">€81.50</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">C.A.R.M C.M. (Douro)</div>
+                    <div class="item-desc">Vinho tinto premium do Douro</div>
+                </div>
+                <div class="item-price">€65.00</div>
+            </div>
+        </div>
+
+        <h2>Sobremesas</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Pastel de Nata</div>
+                    <div class="item-desc">Tradicional pastel de nata português</div>
+                </div>
+                <div class="item-price">€2.50</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Arroz Doce</div>
+                    <div class="item-desc">Arroz doce português com canela</div>
+                </div>
+                <div class="item-price">€3.50</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Pudim Flan</div>
+                    <div class="item-desc">Pudim flan de caramelo</div>
+                </div>
+                <div class="item-price">€3.50</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Mousse de Chocolate</div>
+                    <div class="item-desc">Mousse de chocolate caseira</div>
+                </div>
+                <div class="item-price">€4.00</div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2023 Restaurante Cinderela - Todos os direitos reservados</p>
+            <p>Os preços podem estar sujeitos a alterações</p>
+            <button class="print-button" onclick="window.print();">Imprimir Menu</button>
+        </footer>
+    </div>
+</body>
+</html> 
