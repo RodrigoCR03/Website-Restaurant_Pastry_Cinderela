@@ -24,20 +24,7 @@
   ],
   "cleanUrls": true,
   "trailingSlash": false,
-  "routes": [
-    {
-      "src": "/files/(.*)",
-      "status": 404,
-      "continue": false
-    },
-    {
-      "src": "/assets/(.*)",
-      "status": 404,
-      "continue": false
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/$1" }
   ]
-} 
+}
