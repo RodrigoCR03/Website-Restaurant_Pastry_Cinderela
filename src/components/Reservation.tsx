@@ -217,7 +217,7 @@ const Reservation: React.FC = () => {
                     min="10"
                     max="200"
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37]"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] md:appearance-auto [appearance:textfield] md:[&::-webkit-outer-spin-button]:appearance-auto md:[&::-webkit-inner-spin-button]:appearance-auto [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none touch:cursor-default"
                     disabled={isSubmitting}
                   />
                 </div>

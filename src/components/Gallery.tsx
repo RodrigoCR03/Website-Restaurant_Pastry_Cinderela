@@ -19,10 +19,6 @@ const galleryImages = [
     alt: "Experiência gastronómica portuguesa"
   },
   {
-    src: "/images/471321222_9089556924439250_6550247800126160064_n.jpg",
-    alt: "Sabores únicos do Cinderela"
-  },
-  {
     src: "/images/471212240_9083780598350216_4620509615416171463_n.jpg",
     alt: "Especialidades da casa"
   },
@@ -137,10 +133,6 @@ const galleryImages = [
   {
     src: "/images/107039196_3268644906530510_8307745193904691013_n.jpg",
     alt: "Sabores únicos do Cinderela"
-  },
-  {
-    src: "/images/104476437_3231943610200640_1789843781520989585_n.jpg",
-    alt: "Gastronomia portuguesa autêntica"
   },
   {
     src: "/images/105285440_3214841525244182_3134958986738293441_n.jpg",
