@@ -111,9 +111,9 @@ npm update
 
 ### 🛡️ Boas Práticas de Segurança
 
-- Todas as chaves de API e dados sensíveis devem ser armazenados no arquivo `.env`
-- Use HTTPS em produção
-- Implemente rate limiting em APIs
-- Valide todos os inputs do usuário
-- Mantenha logs de erro em produção sem expor detalhes sensíveis
-- Execute auditorias de segurança regularmente 
+- Todas as chaves de API e dados sensíveis são armazenados no arquivo `.env`.
+- Usa-se HTTPS em produção.
+- Implementar rate limiting em APIs.
+- Valida-se todos os inputs do usuário.
+- Mantenhem-se logs de erro em produção sem expor detalhes sensíveis.
+- Executa-se auditorias de segurança regularmente.
