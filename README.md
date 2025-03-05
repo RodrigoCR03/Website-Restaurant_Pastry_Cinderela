@@ -25,6 +25,7 @@ Este é o repositório do website oficial do Restaurante&Pastelaria Cinderela, d
 - [Vite](https://vitejs.dev/) - Build tool e servidor de desenvolvimento
 - [Tailwind CSS](https://tailwindcss.com/) - Framework CSS utilitário
 - [ESLint](https://eslint.org/) - Linter para JavaScript/TypeScript
+- **Vercel** - Para Deployment do website.
 
 ## 📋 Pré-requisitos
 
