@@ -1,6 +1,22 @@
-# Website - Restaurante&Pastelaria Cinderela
+# 🌐 WEBSITE - Restaurante&Pastelaria Cinderela
 
-Este é o repositório do website oficial do Restaurante&Pastelaria Cinderela, desenvolvido com React, TypeScript e Tailwind CSS.
+[![React](https://img.shields.io/badge/React-18.3-blue)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-6.2-brightgreen)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-blueviolet)](https://tailwindcss.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+Este é o repositório do website oficial do Restaurante&Pastelaria Cinderela, desenvolvido com tecnologias modernas para proporcionar a melhor experiência aos nossos clientes.
+
+## ✨ Funcionalidades
+
+- 🎨 Design moderno e responsivo
+- 📱 Experiência mobile-first
+- 🗺️ Integração com Google Maps
+- 📝 Sistema de reservas online
+- 🍽️ Cardápio digital atualizado
+- 📸 Galeria de fotos
+- 📞 Formulário de contato
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -14,12 +30,14 @@ Este é o repositório do website oficial do Restaurante&Pastelaria Cinderela, d
 
 - Node.js (versão 18 ou superior)
 - npm ou yarn
+- Git
 
 ## 🔧 Instalação
 
 1. Clone o repositório:
 ```bash
 git clone [URL_DO_REPOSITÓRIO]
+cd Website_Restaurante-Pastry-Cinderela
 ```
 
 2. Instale as dependências:
@@ -29,51 +47,49 @@ npm install
 yarn install
 ```
 
-## 🚀 Comandos Disponíveis
+3. Configure as variáveis de ambiente:
+```bash
+cp .env.example .env
+```
 
-- Iniciar o servidor de desenvolvimento:
+4. Inicie o servidor de desenvolvimento:
 ```bash
 npm run dev
 # ou
 yarn dev
 ```
 
-- Construir o projeto para produção:
-```bash
-npm run build
-# ou
-yarn build
-```
+## 📦 Scripts Disponíveis
 
-- Visualizar a versão de produção localmente:
-```bash
-npm run preview
-# ou
-yarn preview
-```
-
-- Executar o linter:
-```bash
-npm run lint
-# ou
-yarn lint
-```
+- `npm run dev` - Inicia o servidor de desenvolvimento
+- `npm run build` - Cria a build de produção
+- `npm run preview` - Visualiza a build de produção localmente
+- `npm run lint` - Executa o linter para verificar o código
 
 ## 🌐 Estrutura do Projeto
 
-- `/src` - Código fonte da aplicação
-- `/public` - Arquivos estáticos
-- `/src/components` - Componentes React reutilizáveis
-- `/src/pages` - Páginas da aplicação
-- `/src/assets` - Recursos estáticos (imagens, fontes, etc.)
+```
+/
+├── public/          # Arquivos estáticos
+├── src/
+│   ├── assets/     # Recursos (imagens, fontes, etc.)
+│   ├── components/ # Componentes React reutilizáveis
+│   ├── config/     # Configurações da aplicação
+│   ├── hooks/      # Custom hooks
+│   ├── pages/      # Páginas da aplicação
+│   └── types/      # Definições de tipos TypeScript
+├── .env.example    # Template para variáveis de ambiente
+├── .gitignore     # Arquivos ignorados pelo git
+├── package.json    # Dependências e scripts
+└── README.md       # Este arquivo
+```
 
-## 📝 Desenvolvimento
+## 🔒 Segurança
 
-O projeto utiliza:
-- ESLint para garantir a qualidade do código
-- TypeScript para tipagem estática
-- Tailwind CSS para estilização
-- Vite para um desenvolvimento rápido e eficiente
+Consulte nossa [seção de segurança](#-configuração-do-ambiente-e-segurança) para informações sobre:
+- Configuração de variáveis de ambiente
+- Boas práticas de segurança
+- Manutenção de dependências
 
 ## 🤝 Contribuição
 
@@ -85,7 +101,7 @@ O projeto utiliza:
 
 ## 📄 Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+Este projeto está sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
 
 ## 🔒 Configuração do Ambiente e Segurança
 
@@ -111,9 +127,9 @@ npm update
 
 ### 🛡️ Boas Práticas de Segurança
 
-- Todas as chaves de API e dados sensíveis são armazenados no arquivo `.env`.
-- Usa-se HTTPS em produção.
-- Implementar rate limiting em APIs.
-- Valida-se todos os inputs do usuário.
-- Mantenhem-se logs de erro em produção sem expor detalhes sensíveis.
-- Executa-se auditorias de segurança regularmente.
+- Todas as chaves de API e dados sensíveis devem ser armazenados no arquivo `.env`
+- Use HTTPS em produção
+- Implemente rate limiting em APIs
+- Valide todos os inputs do usuário
+- Mantenha logs de erro em produção sem expor detalhes sensíveis
+- Execute auditorias de segurança regularmente
