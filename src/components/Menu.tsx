@@ -297,9 +297,9 @@ const Menu: React.FC = () => {
               </div>
 
               {/* Alerta */}
-              <div className="bg-[#FFF3CD] border border-[#FFE69C] text-[#856404] p-4 rounded-lg mb-4">
-                <p className="font-bold">ALERTAMOS:</p>
-                <p>
+              <div className="mb-6 p-4 bg-[#FFF3CD] border border-[#FFE69C] rounded-lg">
+                <p className="font-semibold text-[#856404]">ALERTAMOS:</p>
+                <p className="text-[#856404]">
                   Caso haja redução drástica (+25%) do nº de pessoas indicadas na confirmação da reserva (no próprio dia), perderá o valor do sinal.
                 </p>
               </div>
@@ -312,8 +312,8 @@ const Menu: React.FC = () => {
               </div>
 
               {/* Nota Final */}
-              <div className="bg-[#FFF3CD] border border-[#FFE69C] text-[#856404] p-4 rounded-lg mt-4">
-                <p className="font-bold">Nota:</p>
+              <div className="p-4 bg-gray-50 rounded-lg">
+                <p className="font-semibold">NOTA:</p>
                 <p>O pagamento total será efectuado pelo responsável da marcação da mesa, não aceitamos pagamentos individuais.</p>
               </div>
             </div>
