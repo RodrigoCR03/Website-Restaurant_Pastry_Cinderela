@@ -1,6 +1,6 @@
-# Website - Restaurante & Pastelaria Cinderela
+# Website - Restaurante&Pastelaria Cinderela
 
-Este é o repositório do website oficial do Restaurante/Pastelaria Cinderela, desenvolvido com React, TypeScript e Tailwind CSS.
+Este é o repositório do website oficial do Restaurante&Pastelaria Cinderela, desenvolvido com React, TypeScript e Tailwind CSS.
 
 ## 🚀 Tecnologias Utilizadas
 
