@@ -21,7 +21,7 @@ const Reservation: React.FC = () => {
     setError(null);
     
     try {
-      const response = await fetch('https://formspree.io/f/xnnpaagp', {
+      const response = await fetch('https://formspree.io/f/xblgrrpd', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
