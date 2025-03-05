@@ -215,52 +215,8 @@ const menuItems: MenuItem[] = [
     description: "Entradas: Pão Manteiga / Pasta, Paté de atum, Queijinhos alentejanos, Salgadinhos diversos. | 1º Prato: Bacalhau folhado com saladinha francesa. | 2º Prato: Vitela à Lafões. | Bebidas: Água, Sumos, Sangria, cerveja, Vinhos: tinto e branco. | Sobremesas: Pudim flan, leite-creme, Salada de frutas, Bolo de Chocolate, Bolo de Amêndoa. | Café.",
     price: "25.00",
     category: "snacks"
-  },
-
-  // Adicionar após os menus existentes na categoria 'events'
-  {
-    name: "Menu 1 de Batizado",
-    price: "30,00€",
-    description: "Sopa: Creme de cenoura. | Entradas: Pão Manteiga / Patés, Aceitonas, Pastéis de Bacalhau, Rissóis de Camarão, Croquetes de vitela, Camarão cozido. | Quentes: 1º Prato - Filete de Linguado com arroz marisco. 2º Prato - Lombo assado com batata à padeiro. | Bebidas: Água, Sumos, Sangria, cerveja, Vinhos: Douro, Quinta do Caleiro Reserva. | Mesa de Sobremesa: Pudim flan, leite-creme, Salada de frutas, Bolo de Chocolate, Torta de Amêndoa, Arroz doce, Leite creme. | Digestivos: Amêndoa Amarga, Porto, Whisky novo. | BOLO BAPTIZADO.",
-    category: "eventos"
-  },
-  {
-    name: "Menu 2 de Batizado",
-    price: "35,00€",
-    description: "Sopa: Caldo verde. | Entradas: Pão Manteiga / Pasta, Azeitonas, Pastéis de Bacalhau, Rissóis de Camarão, Croquetes de vitela, Camarão cozido. | Quentes: 1º Prato - Bacalhau à delícia com camarão. 2º Prato - Picanha do Brasil no churrasco. | Mesa de Sobremesa: Pudim flan, leite-creme, Salada de frutas, arroz doce, Bolo de Chocolate, Tarte de Amêndoa, gelatinas, bolo de amêndoa. | BOLO DE BATIZADO. | Bebidas: Água, Sumos, Sangria, cerveja, Vinhos: Douro, Quinta do Portal Reserva, Alentejo, branco ou tinto. | Digestivos: Amêndoa Amarga, Porto, Whisky novo.",
-    category: "eventos"
-  },
-  {
-    name: "Menu 3 de Batizado",
-    price: "45,00€",
-    description: "Sopa: Creme de Cenoura. | Entradas: Pão Manteiga / Patés, Azeitonas, Pastéis de Bacalhau, Rissóis de Camarão, Croquetes de vitela, Camarão cozido, Presunto. | Quentes: 1º Prato - Massada de Tamboril com Camarão. 2º Prato - Nacos de vitela à Beirão. | Bebidas: Água, Sumos, Sangria, cerveja, Vinhos: Douro, Quinta do Caleiro Reserva, Montalegre, branco. | Mesa de Sobremesa: Pudim flan, leite-creme, Salada de frutas, arroz doce, Bolo de Chocolate, Tarte de Amêndoa, gelatinas, bolo de amêndoa. | BOLO DE BATIZADO. | Digestivos: Amêndoa Amarga, Porto, Whisky novo.",
-    category: "eventos"
-  },
-  {
-    name: "Menu 1 de Casamento",
-    price: "40,00€",
-    description: "Sopa: Creme de cenoura. | Entradas: Pão, Manteiga, Queijinhos alentejanos, Salgadinhos mistos, Rissóis de Camarão, Paté de Atum, Queijo curado amanteigado de cabra. | Quentes: 1º Prato - Arroz de Tamboril c/ Gambas. 2º Prato - Lombo de Porco assado à Portuguesa. | Bebidas: Água, Sumos, Sangria, Vinhos: Douro, branco e tinto. | Mesa de Sobremesa: Pudim flan, leite-creme, Arroz doce, Salada de frutas, Bolo de Chocolate, Bolo de amêndoa, Brigadeiro de chocolate, Fruta diversa. | Digestivos: Whisky novo, Porto, Amêndoa amarga.",
-    category: "eventos"
-  },
-  {
-    name: "Menu 2 de Casamento",
-    price: "45,00€",
-    description: "Sopa: Canja de galinha. | Entradas: Pão, Manteiga, Queijinhos alentejanos, Salgadinhos mistos, Rissóis de Camarão, Paté de Atum, Queijo curado amanteigado de cabra, Croquetes de vitela, empadas, Presunto de chaves, Camarão cozido. | Quentes: 1º Prato - Bacalhau no forno com broa. 2º Prato - Nacos de vitela à Beirão. | Bebidas: Água, Sumos, Sangria, Vinhos: Douro, branco e tinto, Ice Tea, Cerveja. | Mesa de Sobremesa: Pudim flan, leite-creme, Arroz doce, Salada de frutas, Bolo de Chocolate, Bolo de amêndoa, Brigadeiro de chocolate, Fruta diversa, Miniaturas diversas, Semífrio de frutos tropicais. | Café. | Digestivos: Whisky novo, Aguardente, Porto, amêndoa amarga. | Espumante. | Bolo de noiva.",
-    category: "eventos"
-  },
-  {
-    name: "Menu 3 de Casamento",
-    price: "50,00€",
-    description: "Sopa: Creme de ogríão. | Entradas: Pão, Manteiga, Queijinhos alentejanos, Salgadinhos mistos, Rissóis de Camarão, Paté de Atum, Queijo curado amanteigado de cabra, Croquetes de vitela, Empadas, Presunto de chaves, Camarão cozido. | Quentes: 1º Prato - Filete de Linguada com Arroz de marisco. 2º Prato - Costelo de vitela assada no forno. | Bebidas: Água, Sumos, Sangria, Vinhos, Alentejo, branco e tinto, Ice Tea, Cerveja. | Digestivos: Whisky novo, Aguardente, Porto. | Mesa de Sobremesas: Amêndoa amarga, Espumante, Pudim flan, leite-creme, Arroz doce, Salada de frutas, Bolo de Chocolate, Bolo de amêndoa, Brigadeiro de chocolate, Fruta diversa, Miniaturas diversas, Bolo de noiva, Semífrio de frutos tropicais, Torta de laranja, Molotof, Bavaroise de Morango, Café.",
-    category: "eventos"
-  },
-  {
-    name: "Menu 4 de Casamento",
-    price: "55,00€",
-    description: "Sopa: Creme de cenoura. | Entradas: Pão, Manteiga, Queijinhos alentejanos, Salgadinhos mistos, Rissóis de Camarão, Paté de Atum, Croquetes de vitela, Empadas. | Quentes: 1º Prato - Arroz de marisco. 2º Prato - Lombo de porco assado com puré de castanhas. | Mesa de Sobremesas: Pudim flan, leite-creme, Arroz doce, Salada de frutas, Bolo de Chocolate, Bolo de amêndoa, Brigadeiro de chocolate, Fruta diversa, Miniaturas diversas, Semífrio de frutos tropicais, Torta de laranja, Molotof, Bavaroise de Morango. | Bebidas: Água, Sumos, Sangria, Vinhos Reserva Castelo dalba, branco e tinto, Ice Tea, Cerveja. | Digestivos: Garrafa de Whisky novo, Garrafa de Aguardente, Garrafa de Porto, Garrafa de amêndoa amarga, Espumante. | Mesa de Lanche: Caldo verde, Mexilhão à bulhão pato, Leitão da Bairrada, Camarão cozido, Salgadinhos diversos. | Bolo de noiva.",
-    category: "eventos"
   }
-] as const;
+];
 
 const Menu: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>("starters");
@@ -275,8 +231,8 @@ const Menu: React.FC = () => {
     { id: "desserts", name: "Sobremesas" },
     { id: "wines", name: "Vinho" },
     { id: "drinks", name: "Bebidas" },
-    { id: "snacks", name: "Eventos" },  // Mudando nome de "Petiscos" para "Eventos" e movendo para o final
-  ].filter(category => category.id !== "events" && category.id !== "eventos");
+    { id: "snacks", name: "Eventos" }  // Mudando nome de "Petiscos" para "Eventos" e movendo para o final
+  ];
   
   const filteredItems = menuItems.filter(item => item.category === activeCategory);
   
@@ -390,8 +346,8 @@ const Menu: React.FC = () => {
                 ) : (
                   <p className="text-gray-600">{item.description}</p>
                 )}
-            </div>
-          ))}
+              </div>
+            ))}
           </div>
         </div>
         
