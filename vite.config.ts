@@ -11,7 +11,10 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom']
-        }
+        },
+        assetFileNames: 'static/[hash][extname]', // Renomeia assets com hash
+        chunkFileNames: 'static/[hash].js',       // Renomeia chunks com hash
+        entryFileNames: 'static/[hash].js'        // Renomeia entry points com hash
       }
     }
   }

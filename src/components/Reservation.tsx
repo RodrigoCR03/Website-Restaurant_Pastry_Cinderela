@@ -95,11 +95,18 @@ const Reservation: React.FC = () => {
         
         <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-8 text-gray-800">
           <div className="mb-8 text-center">
+            {/* Alerta para reservas no mesmo dia */}
+            <div className="mb-6 p-4 bg-[#FFF3CD] border border-[#FFE69C] rounded-lg">
+              <p className="text-[#856404]">
+                <span className="font-semibold">Atenção:</span>
+                &nbsp;Para reservas no próprio dia, por favor contacte-nos diretamente pelo telemóvel indicado abaixo.
+              </p>
+            </div>
             <div className="flex items-center justify-center text-[#F5F5DC] bg-[#1C2E4A] rounded-lg p-4">
               <Phone size={20} className="mr-2 text-[#D4AF37]" />
               <p>
                 Reservas para menos de 10 pessoas: {' '}
-                <a href="tel:+351935646485" className="font-semibold hover:text-[#D4AF37] transition-colors">+351 935 646 485</a>
+                <a href="tel:+351969524991" className="font-semibold hover:text-[#D4AF37] transition-colors">+351 969 524 991</a>
               </p>
             </div>
           </div>

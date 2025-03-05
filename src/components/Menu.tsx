@@ -8,7 +8,7 @@ type MenuItem = {
 };
 
 const menuItems: MenuItem[] = [
-  // Entradas
+  // Petiscos (anteriormente Entradas)
   { name: "Caldo Camarão", description: "Caldo tradicional de camarão", price: "3.80", category: "starters" },
   { name: "Sopa Alentejana", description: "Sopa tradicional da região do Alentejo", price: "2.50", category: "starters" },
   { name: "Queijo da Serra com Tostinhas", description: "Queijo da Serra com tostas", price: "10.00", category: "starters" },
@@ -26,6 +26,12 @@ const menuItems: MenuItem[] = [
   { name: "Ovos Mexidos, Tomate, Cogumelos", description: "Ovos mexidos com tomate e cogumelos", price: "9.00", category: "starters" },
   { name: "Chouriço Assado", description: "Chouriço assado", price: "8.50", category: "starters" },
   { name: "Morcela Assada com Ananás", description: "Morcela assada com ananás", price: "9.00", category: "starters" },
+  // Adicionando os itens que estavam em "snacks"
+  { name: "Prego no Pão", description: "Prego no pão", price: "5.50", category: "starters" },
+  { name: "Prego Especial Queijo e Bacon", description: "Prego especial com queijo e bacon", price: "8.50", category: "starters" },
+  { name: "Bifana no Pão", description: "Bifana no pão", price: "4.50", category: "starters" },
+  { name: "Panado Porco no Pão", description: "Panado de porco no pão", price: "4.50", category: "starters" },
+  { name: "Tosta Mista", description: "Tosta mista de fiambre e queijo", price: "5.00", category: "starters" },
   
   // Pratos Principais - Peixe
   { name: "Bacalhau à Chefe", description: "Bacalhau preparado à moda do chef", price: "20.00", category: "fish" },
@@ -47,13 +53,6 @@ const menuItems: MenuItem[] = [
   { name: "Bife da Vazia de Vitela Grelhado", description: "Bife da vazia de vitela grelhado", price: "20.00", category: "meat" },
   { name: "Alheira com Batata Frita e Ovo", description: "Alheira com batata frita e ovo", price: "13.50", category: "meat" },
   { name: "Hambúrguer de Vitela com Ovo", description: "Hambúrguer de vitela com ovo", price: "13.50", category: "meat" },
-  
-  // Petiscos
-  { name: "Prego no Pão", description: "Prego no pão", price: "5.50", category: "snacks" },
-  { name: "Prego Especial Queijo e Bacon", description: "Prego especial com queijo e bacon", price: "8.50", category: "snacks" },
-  { name: "Bifana no Pão", description: "Bifana no pão", price: "4.50", category: "snacks" },
-  { name: "Panado Porco no Pão", description: "Panado de porco no pão", price: "4.50", category: "snacks" },
-  { name: "Tosta Mista", description: "Tosta mista de fiambre e queijo", price: "5.00", category: "snacks" },
   
   // Omeletes
   { name: "Omelete de Camarão", description: "Omelete de camarão", price: "18.50", category: "omelets" },
@@ -174,15 +173,100 @@ const menuItems: MenuItem[] = [
   { name: "Pudim Flan", description: "Pudim flan de caramelo", price: "3.50", category: "desserts" },
   { name: "Mousse de Chocolate", description: "Mousse de chocolate caseira", price: "4.00", category: "desserts" },
   { name: "Omelete de Chouriço", description: "Omelete com chouriço", price: "18.50", category: "omelets" },
-  { name: "Omelete Mista", description: "Omelete com queijo, presunto e cogumelos", price: "15.00", category: "omelets" }
-];
+  { name: "Omelete Mista", description: "Omelete com queijo, presunto e cogumelos", price: "15.00", category: "omelets" },
+
+  // Eventos - Menus de Aniversário (agora primeiro)
+  {
+    name: "Menu 1 de Aniversário",
+    description: "Entradas: Pão Manteiga / Pasta, Paté de atum, Queijo alentejanos, Salgadinhos diversos. | 1º Prato: Bacalhau Espiritual. | 2º Prato: Lombinhos com Cogumelos. | Bebidas: Água, Sumos, Sangria, cerveja, Vinhos: tinto e branco. | Sobremesa: Pudim flan, leite creme, Salada de frutas, Bolo de Chocolate, Bolo de Amêndoa, Bolo de Aniversário. | 1 garrafa de espumante.",
+    price: "27.50",
+    category: "snacks"
+  },
+  {
+    name: "Menu 2 de Aniversário",
+    description: "Entradas: Martini ou moscatel, Pão Manteiga / Pasta, Paté de atum, Bóia de Favalos, Queijinhos alentejanos, Salgadinhos diversos, Ovos mexidos com farinheira. | Quentes: 1º Prato: Bacalhau com Natas, 2º Prato: Bifinhos de Vitela com Cogumelos. | Bebidas: Água, Sumos, Sangria, cerveja, Vinhos: Douro Reserva, tinto e branco. | Mesa de Sobremesas: Pudim flan, leite-creme, Salada de frutas, Bolo de Chocolate, Bolo de Amêndoa. | Café: Porto, Amêndoa Amarga, whisky novo. | Bolo de Aniversário + 1 garrafa de champanhe.",
+    price: "30.00",
+    category: "snacks"
+  },
+  {
+    name: "Menu 3 de Aniversário",
+    description: "Entradas: Martini ou moscatel. | Bebidas: Água, Sumos, Sangria, cerveja. | Vinhos: Dão, tinto e branco. | Entradas: Pão Manteiga, presunto fatiado, Alheira Mirandela, Queijinhos alentejanos, Salgadinhos diversos, Ovos mexidos com farinheira, Camarão flambeado, Santola recheada. | Quentes: 1º Prato: Arroz de Polvo com Camarão, 2º Prato: Vitela à Lafões. | Mesa de Sobremesas: Pudim flan, leite-creme, Salada de frutas, Bolo de Chocolate, Bolo de Amêndoa, Bolo Rei. | Café: 1 G. Porto, 1 G. Amêndoa Amarga.",
+    price: "32.50",
+    category: "snacks"
+  },
+
+  // Eventos - Menu Académico (segundo)
+  {
+    name: "Menu Académico",
+    description: "Entradas: Pão, manteigas, patês, queijinhos fatiados, Salgadinhos diversos, Presunto fatiado. | Sopa: Creme de cenoura. | Peixes: Bacalhau espiritual com salada juliana, Lombinhos de peixe com salada russa. | Carnes: Lombo de porco assado à padeiro, Nacos de vitela à Beirão. | Sobremesas: Tarte de Amêndoa, Pudim flã, Bolo de chocolate, Arroz doce, Brigadeiro, gelatinas, frutas diversas. | Bebidas: Vinho branco e tinto, águas, sumos, cerveja, sangria. | Café: Amêndoa amarga, Porto, Bagaceira.",
+    price: "20.00",
+    category: "snacks"
+  },
+
+  // Eventos - Menus de Natal (por último)
+  {
+    name: "Menu 1 de Natal",
+    description: "Entradas: Pão, Manteiga, presunto fatiado, Queijinhos fatiados, Ovos mexidos com farinheira, Alheira c/picles. | Quentes: 1º Prato à escolha entre Lombo Assado no Forno com Batata Assada, Bacalhau Espiritual com Camarão, Massada de Garoupa com Camarão. | Bebidas: Água, Sumos, Sangria, cerveja, Vinhos: Tinto e branco. | Mesa de Sobremesas: Pudim flan, leite-creme, molotov, salada de frutas, Bolo de Chocolate, Bolo de Amêndoa.",
+    price: "30.00",
+    category: "snacks"
+  },
+  {
+    name: "Menu 2 de Natal",
+    description: "Entradas: Pão Manteiga / Pasta, Paté de atum, Queijinhos alentejanos, Salgadinhos diversos. | 1º Prato: Bacalhau folhado com saladinha francesa. | 2º Prato: Vitela à Lafões. | Bebidas: Água, Sumos, Sangria, cerveja, Vinhos: tinto e branco. | Sobremesas: Pudim flan, leite-creme, Salada de frutas, Bolo de Chocolate, Bolo de Amêndoa. | Café.",
+    price: "25.00",
+    category: "snacks"
+  },
+
+  // Adicionar após os menus existentes na categoria 'events'
+  {
+    name: "Menu 1 de Batizado",
+    price: "30,00€",
+    description: "Sopa: Creme de cenoura. | Entradas: Pão Manteiga / Patés, Aceitonas, Pastéis de Bacalhau, Rissóis de Camarão, Croquetes de vitela, Camarão cozido. | Quentes: 1º Prato - Filete de Linguado com arroz marisco. 2º Prato - Lombo assado com batata à padeiro. | Bebidas: Água, Sumos, Sangria, cerveja, Vinhos: Douro, Quinta do Caleiro Reserva. | Mesa de Sobremesa: Pudim flan, leite-creme, Salada de frutas, Bolo de Chocolate, Torta de Amêndoa, Arroz doce, Leite creme. | Digestivos: Amêndoa Amarga, Porto, Whisky novo. | BOLO BAPTIZADO.",
+    category: "eventos"
+  },
+  {
+    name: "Menu 2 de Batizado",
+    price: "35,00€",
+    description: "Sopa: Caldo verde. | Entradas: Pão Manteiga / Pasta, Azeitonas, Pastéis de Bacalhau, Rissóis de Camarão, Croquetes de vitela, Camarão cozido. | Quentes: 1º Prato - Bacalhau à delícia com camarão. 2º Prato - Picanha do Brasil no churrasco. | Mesa de Sobremesa: Pudim flan, leite-creme, Salada de frutas, arroz doce, Bolo de Chocolate, Tarte de Amêndoa, gelatinas, bolo de amêndoa. | BOLO DE BATIZADO. | Bebidas: Água, Sumos, Sangria, cerveja, Vinhos: Douro, Quinta do Portal Reserva, Alentejo, branco ou tinto. | Digestivos: Amêndoa Amarga, Porto, Whisky novo.",
+    category: "eventos"
+  },
+  {
+    name: "Menu 3 de Batizado",
+    price: "45,00€",
+    description: "Sopa: Creme de Cenoura. | Entradas: Pão Manteiga / Patés, Azeitonas, Pastéis de Bacalhau, Rissóis de Camarão, Croquetes de vitela, Camarão cozido, Presunto. | Quentes: 1º Prato - Massada de Tamboril com Camarão. 2º Prato - Nacos de vitela à Beirão. | Bebidas: Água, Sumos, Sangria, cerveja, Vinhos: Douro, Quinta do Caleiro Reserva, Montalegre, branco. | Mesa de Sobremesa: Pudim flan, leite-creme, Salada de frutas, arroz doce, Bolo de Chocolate, Tarte de Amêndoa, gelatinas, bolo de amêndoa. | BOLO DE BATIZADO. | Digestivos: Amêndoa Amarga, Porto, Whisky novo.",
+    category: "eventos"
+  },
+  {
+    name: "Menu 1 de Casamento",
+    price: "40,00€",
+    description: "Sopa: Creme de cenoura. | Entradas: Pão, Manteiga, Queijinhos alentejanos, Salgadinhos mistos, Rissóis de Camarão, Paté de Atum, Queijo curado amanteigado de cabra. | Quentes: 1º Prato - Arroz de Tamboril c/ Gambas. 2º Prato - Lombo de Porco assado à Portuguesa. | Bebidas: Água, Sumos, Sangria, Vinhos: Douro, branco e tinto. | Mesa de Sobremesa: Pudim flan, leite-creme, Arroz doce, Salada de frutas, Bolo de Chocolate, Bolo de amêndoa, Brigadeiro de chocolate, Fruta diversa. | Digestivos: Whisky novo, Porto, Amêndoa amarga.",
+    category: "eventos"
+  },
+  {
+    name: "Menu 2 de Casamento",
+    price: "45,00€",
+    description: "Sopa: Canja de galinha. | Entradas: Pão, Manteiga, Queijinhos alentejanos, Salgadinhos mistos, Rissóis de Camarão, Paté de Atum, Queijo curado amanteigado de cabra, Croquetes de vitela, empadas, Presunto de chaves, Camarão cozido. | Quentes: 1º Prato - Bacalhau no forno com broa. 2º Prato - Nacos de vitela à Beirão. | Bebidas: Água, Sumos, Sangria, Vinhos: Douro, branco e tinto, Ice Tea, Cerveja. | Mesa de Sobremesa: Pudim flan, leite-creme, Arroz doce, Salada de frutas, Bolo de Chocolate, Bolo de amêndoa, Brigadeiro de chocolate, Fruta diversa, Miniaturas diversas, Semífrio de frutos tropicais. | Café. | Digestivos: Whisky novo, Aguardente, Porto, amêndoa amarga. | Espumante. | Bolo de noiva.",
+    category: "eventos"
+  },
+  {
+    name: "Menu 3 de Casamento",
+    price: "50,00€",
+    description: "Sopa: Creme de ogríão. | Entradas: Pão, Manteiga, Queijinhos alentejanos, Salgadinhos mistos, Rissóis de Camarão, Paté de Atum, Queijo curado amanteigado de cabra, Croquetes de vitela, Empadas, Presunto de chaves, Camarão cozido. | Quentes: 1º Prato - Filete de Linguada com Arroz de marisco. 2º Prato - Costelo de vitela assada no forno. | Bebidas: Água, Sumos, Sangria, Vinhos, Alentejo, branco e tinto, Ice Tea, Cerveja. | Digestivos: Whisky novo, Aguardente, Porto. | Mesa de Sobremesas: Amêndoa amarga, Espumante, Pudim flan, leite-creme, Arroz doce, Salada de frutas, Bolo de Chocolate, Bolo de amêndoa, Brigadeiro de chocolate, Fruta diversa, Miniaturas diversas, Bolo de noiva, Semífrio de frutos tropicais, Torta de laranja, Molotof, Bavaroise de Morango, Café.",
+    category: "eventos"
+  },
+  {
+    name: "Menu 4 de Casamento",
+    price: "55,00€",
+    description: "Sopa: Creme de cenoura. | Entradas: Pão, Manteiga, Queijinhos alentejanos, Salgadinhos mistos, Rissóis de Camarão, Paté de Atum, Croquetes de vitela, Empadas. | Quentes: 1º Prato - Arroz de marisco. 2º Prato - Lombo de porco assado com puré de castanhas. | Mesa de Sobremesas: Pudim flan, leite-creme, Arroz doce, Salada de frutas, Bolo de Chocolate, Bolo de amêndoa, Brigadeiro de chocolate, Fruta diversa, Miniaturas diversas, Semífrio de frutos tropicais, Torta de laranja, Molotof, Bavaroise de Morango. | Bebidas: Água, Sumos, Sangria, Vinhos Reserva Castelo dalba, branco e tinto, Ice Tea, Cerveja. | Digestivos: Garrafa de Whisky novo, Garrafa de Aguardente, Garrafa de Porto, Garrafa de amêndoa amarga, Espumante. | Mesa de Lanche: Caldo verde, Mexilhão à bulhão pato, Leitão da Bairrada, Camarão cozido, Salgadinhos diversos. | Bolo de noiva.",
+    category: "eventos"
+  }
+] as const;
 
 const Menu: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>("starters");
   
   const categories = [
-    { id: "starters", name: "Entradas" },
-    { id: "snacks", name: "Petiscos" },
+    { id: "starters", name: "Petiscos" },  // Mudando nome de "Entradas" para "Petiscos"
     { id: "omelets", name: "Omeletes" },
     { id: "salads", name: "Saladas" },
     { id: "meat", name: "Carne" },
@@ -190,8 +274,9 @@ const Menu: React.FC = () => {
     { id: "buffet", name: "Buffet" },
     { id: "desserts", name: "Sobremesas" },
     { id: "wines", name: "Vinho" },
-    { id: "drinks", name: "Bebidas" }
-  ];
+    { id: "drinks", name: "Bebidas" },
+    { id: "snacks", name: "Eventos" },  // Mudando nome de "Petiscos" para "Eventos" e movendo para o final
+  ].filter(category => category.id !== "events" && category.id !== "eventos");
   
   const filteredItems = menuItems.filter(item => item.category === activeCategory);
   
@@ -221,16 +306,93 @@ const Menu: React.FC = () => {
           ))}
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {filteredItems.map((item, index) => (
-            <div key={index} className="flex justify-between p-4 border-b border-gray-200">
-              <div>
-                <h3 className="text-xl font-bold text-primary">{item.name}</h3>
-                <p className="text-gray-600">{item.description}</p>
+        <div className="mt-8">
+          {activeCategory === "buffet" && (
+            <div className="mb-6 p-4 bg-[#FFF3CD] border border-[#FFE69C] rounded-lg text-center">
+              <p className="text-[#856404] font-medium">
+                O serviço de Buffet está disponível apenas durante o almoço
+              </p>
+            </div>
+          )}
+          
+          {activeCategory === "snacks" && (
+            <div className="mb-8 p-6 bg-[#FDF5E6] rounded-lg shadow-md">
+              <h3 className="text-2xl font-bold mb-4 text-center">Informações Importantes para Eventos</h3>
+              
+              {/* Seção de Sinal */}
+              <div className="mb-6">
+                <p className="font-semibold mb-3">Depois de confirmada, deve ser efectuado pagamento do sinal da reserva:</p>
+                <ul className="list-none space-y-2 ml-4">
+                  <li>• Até 5 pessoas, sem sinal</li>
+                  <li>• Até 20 pessoas, 17.50€</li>
+                  <li>• Até 30 pessoas, 35€</li>
+                  <li>• Até 50 pessoas, 75€</li>
+                  <li>• Acima das 50 pessoas, com a confirmação pagamento de 100€</li>
+                </ul>
+                <p className="mt-2 text-sm italic">
+                  Alerta-se que no dia anterior ou no próprio dia até às 12 horas deve ser paga a totalidade ou pelo menos 80% do valor, sendo o restante pago, no acto, antes da refeição.
+                </p>
               </div>
-              <div className="text-xl font-bold text-secondary">€{item.price}</div>
+
+              {/* Seção de Pagamento */}
+              <div className="mb-6">
+                <p className="font-semibold mb-2">O valor de sinal deve ser efectuado por MB WAY para os números</p>
+                <p className="text-lg font-bold text-[#D4AF37] mb-4">+351 964 549 147 ou +351 969 524 991 com nome da reserva</p>
+              </div>
+
+              {/* Alerta */}
+              <div className="bg-[#FFF3CD] border border-[#FFE69C] text-[#856404] p-4 rounded-lg mb-4">
+                <p className="font-bold">ALERTAMOS:</p>
+                <p>
+                  Caso haja redução drástica (+25%) do nº de pessoas indicadas na confirmação da reserva (no próprio dia), perderá o valor do sinal.
+                </p>
+              </div>
+
+              {/* Horário */}
+              <div className="mb-6">
+                <p className="font-semibold mb-2">Horário:</p>
+                <p>das 20 horas às 23.00 horas</p>
+                <p className="text-sm italic">(Excepto menu académico: 20 às 22.30 horas)</p>
+              </div>
+
+              {/* Nota Final */}
+              <div className="bg-[#FFF3CD] border border-[#FFE69C] text-[#856404] p-4 rounded-lg mt-4">
+                <p className="font-bold">Nota:</p>
+                <p>O pagamento total será efectuado pelo responsável da marcação da mesa, não aceitamos pagamentos individuais.</p>
+              </div>
+            </div>
+          )}
+          
+          <div className={`grid ${
+            activeCategory === "snacks" 
+              ? "grid-cols-1" 
+              : "grid-cols-1 md:grid-cols-2"
+          } gap-6`}>
+            {filteredItems.map((item, index) => (
+              <div 
+                key={index}
+                className={`bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow ${
+                  activeCategory === "snacks" ? "col-span-1" : ""
+                }`}
+              >
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-xl font-bold text-primary">{item.name}</h3>
+                  <span className="text-lg font-semibold text-[#D4AF37]">{item.price}€</span>
+                </div>
+                {item.category === "snacks" ? (
+                  <div className="text-gray-600">
+                    {item.description.split('|').map((section, idx) => (
+                      <p key={idx} className="mb-2">
+                        <span className="font-medium">{section.trim()}</span>
+                      </p>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="text-gray-600">{item.description}</p>
+                )}
             </div>
           ))}
+          </div>
         </div>
         
         <div className="text-center mt-12">
