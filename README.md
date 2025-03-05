@@ -85,4 +85,35 @@ O projeto utiliza:
 
 ## 📄 Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes. 
+Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+
+## 🔒 Configuração do Ambiente e Segurança
+
+1. Crie um arquivo `.env` baseado no `.env.example`:
+```bash
+cp .env.example .env
+```
+
+2. Configure as variáveis de ambiente no arquivo `.env` com seus valores reais:
+```env
+VITE_API_URL=sua_url_api
+VITE_EMAIL_SERVICE_KEY=sua_chave_email
+VITE_GOOGLE_MAPS_API_KEY=sua_chave_google_maps
+VITE_NODE_ENV=development
+```
+
+3. Nunca compartilhe ou comite o arquivo `.env` no repositório
+4. Mantenha as dependências atualizadas executando regularmente:
+```bash
+npm audit
+npm update
+```
+
+### 🛡️ Boas Práticas de Segurança
+
+- Todas as chaves de API e dados sensíveis devem ser armazenados no arquivo `.env`
+- Use HTTPS em produção
+- Implemente rate limiting em APIs
+- Valide todos os inputs do usuário
+- Mantenha logs de erro em produção sem expor detalhes sensíveis
+- Execute auditorias de segurança regularmente 
