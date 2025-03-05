@@ -208,6 +208,7 @@ const Reservation: React.FC = () => {
                   <label htmlFor="guests" className="block text-sm font-medium text-gray-700 mb-1">
                     Número de Pessoas * (mínimo 10)
                   </label>
+                  {/* Input para Desktop */}
                   <input
                     type="number"
                     id="guests"
@@ -217,9 +218,24 @@ const Reservation: React.FC = () => {
                     min="10"
                     max="200"
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] md:appearance-auto [appearance:textfield] md:[&::-webkit-outer-spin-button]:appearance-auto md:[&::-webkit-inner-spin-button]:appearance-auto [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none touch:cursor-default"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] md:block hidden"
                     disabled={isSubmitting}
                   />
+                  {/* Select para Mobile */}
+                  <select
+                    name="guests"
+                    value={formData.guests}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] md:hidden block appearance-none bg-white"
+                    disabled={isSubmitting}
+                  >
+                    {Array.from({ length: 191 }, (_, i) => i + 10).map((num) => (
+                      <option key={num} value={num}>
+                        {num} pessoas
+                      </option>
+                    ))}
+                  </select>
                 </div>
               </div>
               
