@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-2xl font-serif font-bold text-secondary mb-4">Cinderela</h3>
             <p className="mb-4 text-gray-300">
-              Autêntica cozinha portuguesa e pastelaria artesanal no coração de Lisboa.
+              Cozinha portuguesa e pastelaria artesanal no coração de Lisboa.
               Experimente os ricos sabores de Portugal num ambiente acolhedor e convidativo.
             </p>
             <div className="flex space-x-4">

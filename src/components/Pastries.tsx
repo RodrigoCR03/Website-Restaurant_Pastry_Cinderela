@@ -110,8 +110,8 @@ const Pastries: React.FC = () => {
         <div className="text-center mb-12">
           <h2 className="section-title">Pastelaria</h2>
           <p className="max-w-2xl mx-auto text-gray-600">
-            A nossa pastelaria oferece uma variedade de doces tradicionais portugueses, 
-            feitos à mão diariamente usando receitas autênticas transmitidas através de gerações.
+            A nossa pastelaria disponibiliza uma diversidade de doces tradicionais portugueses, 
+            confeccionados artesanalmente todos os dias com base em receitas autênticas, passadas de geração em geração.
           </p>
         </div>
         

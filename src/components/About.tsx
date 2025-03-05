@@ -8,8 +8,8 @@ const About: React.FC = () => {
         <div className="text-center mb-12">
           <h2 className="section-title">A Nossa História</h2>
           <p className="max-w-2xl mx-auto text-gray-600">
-            O Cinderela tem servido autêntica cozinha portuguesa e pastelaria artesanal desde 1995, 
-            trazendo as ricas tradições culinárias de Portugal para os locais e visitantes.
+          O Cinderela tem vindo a servir cozinha portuguesa e pastelaria artesanal desde 1995,
+            trazendo as ricas tradições culinárias de Portugal tanto aos locais como aos visitantes.
           </p>
         </div>
         
@@ -25,8 +25,8 @@ const About: React.FC = () => {
           <div>
             <h3 className="text-2xl font-bold text-primary mb-4">O Sabor de Portugal</h3>
             <p className="text-gray-600 mb-6">
-              No Cinderela, orgulhamo-nos de preservar os sabores autênticos da cozinha portuguesa. 
-              As nossas receitas foram transmitidas através de gerações, garantindo que cada prato captura 
+              No Cinderela, orgulhamo-nos de preservar os sabores da cozinha portuguesa. 
+              As nossas receitas foram transmitidas ao longo de gerações, assegurando que cada prato reflete 
               a essência da rica herança culinária de Portugal.
             </p>
             

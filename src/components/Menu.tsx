@@ -82,9 +82,6 @@ const menuItems: MenuItem[] = [
   { name: "Caneca de Cerveja", description: "Caneca de cerveja", price: "3.00", category: "drinks" },
   { name: "Imperial/Fino", description: "Imperial/Fino", price: "1.40", category: "drinks" },
   { name: "Copo de Vinho", description: "Copo de vinho", price: "1.80", category: "drinks" },
-  { name: "Vinho do Dão", description: "Vinho do Dão (garrafa)", price: "15.00", category: "drinks" },
-  { name: "Vinho do Douro", description: "Vinho do Douro (garrafa)", price: "15.00", category: "drinks" },
-  { name: "Vinho do Alentejo", description: "Vinho do Alentejo (garrafa)", price: "15.00", category: "drinks" },
   
   // Vinhos Recomendados - DOURO
   { name: "Barca Velha Legado (Douro)", description: "Vinho tinto premium do Douro", price: "890.00", category: "wines" },
