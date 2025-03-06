@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Reservation from './components/Reservation';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
+// Removed PrivacyPolicy import
 
 const App: React.FC = () => {
   return (
@@ -23,6 +24,7 @@ const App: React.FC = () => {
       <Contact />
       <Reservation />
       <Footer />
+      {/* Removed PrivacyPolicy component */}
     </>
   );
 };

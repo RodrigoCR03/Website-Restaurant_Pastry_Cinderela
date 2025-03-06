@@ -136,7 +136,27 @@ const Footer: React.FC = () => {
       
       <div className="bg-dark py-4">
         <div className="container mx-auto px-4 text-center text-gray-400 text-sm">
-          <p>&copy; {new Date().getFullYear()} Cinderela Restaurante & Pastelaria. Todos os direitos reservados.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Cinderela Restaurante & Pastelaria. Todos os direitos reservados.
+            <span className="mx-2">|</span>
+            <a 
+              href="/privacy.html" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-secondary transition-colors"
+            >
+              Política de Privacidade
+            </a>
+            <span className="mx-2">|</span>
+            <a 
+              href="https://www.livroreclamacoes.pt/Inicio/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-secondary transition-colors"
+            >
+              Livro de Reclamações
+            </a>
+          </p>
         </div>
       </div>
     </footer>
