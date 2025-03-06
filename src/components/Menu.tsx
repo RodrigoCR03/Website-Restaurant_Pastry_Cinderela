@@ -199,7 +199,7 @@ const menuItems: MenuItem[] = [
   {
     name: "Menu Académico",
     description: "Entradas: Pão, manteigas, patês, queijinhos fatiados, Salgadinhos diversos, Presunto fatiado. | Sopa: Creme de cenoura. | Peixes: Bacalhau espiritual com salada juliana, Lombinhos de peixe com salada russa. | Carnes: Lombo de porco assado à padeiro, Nacos de vitela à Beirão. | Sobremesas: Tarte de Amêndoa, Pudim flã, Bolo de chocolate, Arroz doce, Brigadeiro, gelatinas, frutas diversas. | Bebidas: Vinho branco e tinto, águas, sumos, cerveja, sangria. | Café: Amêndoa amarga, Porto, Bagaceira.",
-    price: "20.00",
+    price: "19.50",
     category: "snacks"
   },
 
