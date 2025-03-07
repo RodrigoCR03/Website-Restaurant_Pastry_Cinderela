@@ -170,8 +170,12 @@ const menuItems: MenuItem[] = [
   // Sobremesas
   { name: "Pastel de Nata", description: "Tradicional pastel de nata português", price: "2.50", category: "desserts" },
   { name: "Arroz Doce", description: "Arroz doce português com canela", price: "3.50", category: "desserts" },
-  { name: "Pudim Flan", description: "Pudim flan de caramelo", price: "3.50", category: "desserts" },
+  { name: "Pudim de Ovos", description: "Pudim de Ovos com caramelo", price: "3.50", category: "desserts" },
   { name: "Mousse de Chocolate", description: "Mousse de chocolate caseira", price: "4.00", category: "desserts" },
+  { name: "Bolo de Chocolate", description: "Delicioso bolo de chocolate caseiro", price: "3.50", category: "desserts" },
+  { name: "Bolo de Amêndoa", description: "Tradicional bolo de amêndoa português", price: "3.50", category: "desserts" },
+  { name: "Salame de Chocolate", description: "Sobremesa tradicional de chocolate com bolachas", price: "3.50", category: "desserts" },
+  { name: "Frutas da Época", description: "Seleção de frutas frescas da época", price: "3.50", category: "desserts" },
   { name: "Omelete de Chouriço", description: "Omelete com chouriço", price: "18.50", category: "omelets" },
   { name: "Omelete Mista", description: "Omelete com queijo, presunto e cogumelos", price: "15.00", category: "omelets" },
 

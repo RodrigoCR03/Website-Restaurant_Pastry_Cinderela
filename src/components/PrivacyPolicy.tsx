@@ -97,7 +97,7 @@ const PrivacyPolicy: React.FC = () => {
           
           <ul className="list-disc pl-6 mb-6 text-gray-600">
             <li><strong>Plataforma de reservas:</strong> O Formspree é o serviço que processa os dados do formulário e os envia para o nosso e-mail geral.cinderela@gmail.com;</li>
-            <li><strong>Prestador de Alojamento:</strong> Vercel é o provedor de alojamento do website, com servidores localizados em Paris, França (União Europeia).</li>
+            <li><strong>Prestador de alojamento:</strong> Vercel é o provedor de alojamento do website, com servidores localizados em Paris, França (União Europeia).</li>
           </ul>
           
           <p className="text-gray-600 mb-6">

@@ -17,9 +17,9 @@ const pastries = [
     description: "Tradicional arroz doce português, cremoso e perfumado com canela e casca de limão"
   },
   {
-    name: "Pudim Flan",
+    name: "Pudim de Ovos",
     image: "/images/UB5A6262-2-1050x1313.jpg",
-    description: "Delicioso pudim flan caseiro com calda de caramelo dourada"
+    description: "Delicioso pudim de ovos caseiro com calda de caramelo"
   },
   {
     name: "Lampreia de Ovos",
@@ -37,39 +37,14 @@ const pastries = [
     description: "Delicioso bolo em forma de tronco, recheado com creme e decorado com chocolate"
   },
   {
-    name: "Pastel de Feijão",
-    image: "/images/66113271_2425071717554504_4183798471339278336_n.jpg",
-    description: "Pastel tradicional com recheio cremoso de feijão branco e amêndoa"
-  },
-  {
-    name: "Croissant de Amêndoa",
-    image: "/images/IMG-20250304-WA0004.jpg",
-    description: "Croissant folhado coberto com amêndoas laminadas e recheado com creme de amêndoa"
-  },
-  {
-    name: "Mil Folhas",
-    image: "/images/IMG-20250304-WA0014.jpg",
-    description: "Delicada sobremesa de massa folhada com camadas de creme pasteleiro e açúcar em pó"
-  },
-  {
     name: "Salame de Chocolate",
     image: "/images/IMG-20250304-WA0012.jpg",
     description: "Sobremesa tradicional portuguesa feita com chocolate, bolachas e frutos secos"
   },
   {
-    name: "Trança de Coco",
-    image: "/images/IMG-20250304-WA0002.jpg",
-    description: "Massa doce trançada com recheio de coco ralado e cobertura dourada"
-  },
-  {
     name: "Bolo de Chocolate",
     image: "/images/IMG-20250304-WA0008.jpg",
     description: "Bolo húmido de chocolate com cobertura de ganache e decoração artesanal"
-  },
-  {
-    name: "Frutas da Época",
-    image: "/images/IMG-20250304-WA0009.jpg",
-    description: "Seleção de frutas frescas da época, cuidadosamente escolhidas para sua sobremesa"
   },
   {
     name: "Bolo de Amêndoa",
@@ -111,7 +86,7 @@ const Pastries: React.FC = () => {
           <h2 className="section-title">Pastelaria</h2>
           <p className="max-w-2xl mx-auto text-gray-600">
             A nossa pastelaria disponibiliza uma diversidade de doces tradicionais portugueses, 
-            confeccionados artesanalmente todos os dias com base em receitas autênticas, passadas de geração em geração.
+            confecionados artesanalmente todos os dias com base em receitas autênticas, passadas de geração em geração.
           </p>
         </div>
         
