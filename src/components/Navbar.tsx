@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
       setIsScrolled(window.scrollY > 50);
 
       // Update active section based on scroll position
-      const sections = ['home', 'about', 'menu', 'pastries', 'gallery', 'contact', 'reservation'];
+      const sections = ['home', 'about', 'menu', 'pastries', 'gallery', 'testimonials', 'contact', 'reservation'];
       const currentSection = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -122,6 +122,14 @@ const Navbar: React.FC = () => {
                 Galeria
               </a>
               <a 
+                href="#testimonials" 
+                onClick={(e) => scrollToSection(e, 'testimonials')}
+                className={getLinkClass('testimonials')}
+                aria-current={activeSection === 'testimonials' ? 'page' : undefined}
+              >
+                Clientes
+              </a>
+              <a 
                 href="#contact" 
                 onClick={(e) => scrollToSection(e, 'contact')}
                 className={getLinkClass('contact')}
@@ -222,6 +230,18 @@ const Navbar: React.FC = () => {
               }`}
             >
               Galeria
+            </a>
+            <a 
+              href="#testimonials" 
+              onClick={(e) => {
+                scrollToSection(e, 'testimonials');
+                setIsOpen(false);
+              }}
+              className={`block px-3 py-2 text-[#D4AF37] hover:text-white transition-colors duration-300 ${
+                activeSection === 'testimonials' ? 'text-white' : ''
+              }`}
+            >
+              Clientes
             </a>
             <a 
               href="#contact" 

@@ -11,14 +11,6 @@ const Hero: React.FC = () => {
   
   const images = [
     {
-      src: "/images/Imagem WhatsApp 2025-03-04 às 22.25.37_dcbb5c26.jpg",
-      alt: "Interior do Restaurante Cinderela"
-    },
-    {
-      src: "/images/Imagem WhatsApp 2025-03-08 às 00.13.26_cfcac16e.jpg",
-      alt: "Restaurante Cinderela"
-    },
-    {
       src: "/images/IMG-20250304-WA0016.jpg",
       alt: "Ambiente do Restaurante Cinderela"
     },
@@ -33,6 +25,14 @@ const Hero: React.FC = () => {
     {
       src: "/images/118309576_4740694492611177_2643396005104335448_n.jpg",
       alt: "Especialidades da Pastelaria Cinderela"
+    },
+    {
+      src: "/images/Imagem WhatsApp 2025-03-04 às 22.25.37_dcbb5c26.jpg",
+      alt: "Interior do Restaurante Cinderela"
+    },
+    {
+      src: "/images/Imagem WhatsApp 2025-03-08 às 00.13.26_cfcac16e.jpg",
+      alt: "Restaurante Cinderela"
     }
   ];
   
@@ -62,29 +62,11 @@ const Hero: React.FC = () => {
             className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ease-in-out ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
             style={{ backgroundImage: `url('${image.src}')` }}
           >
-            <div className="absolute inset-0 bg-primary bg-opacity-70"></div>
+            <div className="absolute inset-0 bg-primary bg-opacity-50"></div>
           </div>
         ))}
         
-        {/* Navigation arrows */}
-        <motion.button 
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-secondary bg-opacity-70 hover:bg-opacity-90 text-white p-3 rounded-full transition-all duration-300 z-10"
-          aria-label="Imagem anterior"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <ChevronLeft size={24} />
-        </motion.button>
-        <motion.button 
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-secondary bg-opacity-70 hover:bg-opacity-90 text-white p-3 rounded-full transition-all duration-300 z-10"
-          aria-label="Próxima imagem"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <ChevronRight size={24} />
-        </motion.button>
+        {/* Navigation arrows - Removed as requested */}
         
         {/* Indicators */}
         <div className="absolute bottom-8 left-0 right-0 flex justify-center space-x-3 z-10">

@@ -39,47 +39,23 @@ const Menu: React.FC = () => {
         
         <div className="mt-8">
           {activeCategory === "petiscos" && (
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-8 place-items-center">
+            <div className="grid grid-cols-1 place-items-center">
               <a 
                 href="#" 
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px] mx-auto w-full"
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px] mx-auto w-full max-w-xs"
                 onClick={(e) => {
                   e.preventDefault();
                   alert('PDF de Menu de Petiscos em breve disponível');
                 }}
               >
-                <h3 className="text-xl font-bold text-primary mb-2">Entradas</h3>
-                <div className="text-sm text-gray-500 mt-2">Clique para ver o PDF</div>
-              </a>
-              
-              <a 
-                href="#" 
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px] mx-auto w-full"
-                onClick={(e) => {
-                  e.preventDefault();
-                  alert('PDF de Menu de Petiscos em breve disponível');
-                }}
-              >
-                <h3 className="text-xl font-bold text-primary mb-2">Petiscos Tradicionais</h3>
-                <div className="text-sm text-gray-500 mt-2">Clique para ver o PDF</div>
-              </a>
-              
-              <a 
-                href="#" 
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px] mx-auto w-full"
-                onClick={(e) => {
-                  e.preventDefault();
-                  alert('PDF de Menu de Petiscos em breve disponível');
-                }}
-              >
-                <h3 className="text-xl font-bold text-primary mb-2">Petiscos do Mar</h3>
+                <h3 className="text-xl font-bold text-primary mb-2">Petiscos</h3>
                 <div className="text-sm text-gray-500 mt-2">Clique para ver o PDF</div>
               </a>
             </div>
           )}
           
           {activeCategory === "principais" && (
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-8 place-items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 place-items-center max-w-2xl mx-auto">
               <a 
                 href="#" 
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px] mx-auto w-full"
@@ -88,29 +64,15 @@ const Menu: React.FC = () => {
                   alert('PDF de Menu de Pratos Principais em breve disponível');
                 }}
               >
-                <h3 className="text-xl font-bold text-primary mb-2">Carnes</h3>
+                <h3 className="text-xl font-bold text-primary mb-2">Principais</h3>
                 <div className="text-sm text-gray-500 mt-2">Clique para ver o PDF</div>
               </a>
               
               <a 
-                href="#" 
+                href="/docs/Menu_Buffet.pdf" 
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px] mx-auto w-full"
-                onClick={(e) => {
-                  e.preventDefault();
-                  alert('PDF de Menu de Pratos Principais em breve disponível');
-                }}
-              >
-                <h3 className="text-xl font-bold text-primary mb-2">Peixes</h3>
-                <div className="text-sm text-gray-500 mt-2">Clique para ver o PDF</div>
-              </a>
-              
-              <a 
-                href="#" 
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px] mx-auto w-full"
-                onClick={(e) => {
-                  e.preventDefault();
-                  alert('PDF de Menu de Pratos Principais em breve disponível');
-                }}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <h3 className="text-xl font-bold text-primary mb-2">Buffet</h3>
                 <div className="text-sm text-gray-500 mt-2">Clique para ver o PDF</div>
@@ -119,10 +81,10 @@ const Menu: React.FC = () => {
           )}
           
           {activeCategory === "especialidades" && (
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-8 place-items-center">
+            <div className="grid grid-cols-1 place-items-center">
               <a 
                 href="/docs/CARDAPIO_2024._RIBEYE.pdf" 
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px] mx-auto w-full"
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px] mx-auto w-full max-w-xs"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -133,13 +95,13 @@ const Menu: React.FC = () => {
           )}
           
           {activeCategory === "bar" && (
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-8 place-items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 place-items-center max-w-2xl mx-auto">
               <a 
                 href="#" 
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px] mx-auto w-full"
                 onClick={(e) => {
                   e.preventDefault();
-                  alert('PDF de Menu de Bar em breve disponível');
+                  alert('PDF de Menu de Vinhos em breve disponível');
                 }}
               >
                 <h3 className="text-xl font-bold text-primary mb-2">Vinhos</h3>
@@ -151,19 +113,7 @@ const Menu: React.FC = () => {
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px] mx-auto w-full"
                 onClick={(e) => {
                   e.preventDefault();
-                  alert('PDF de Menu de Bar em breve disponível');
-                }}
-              >
-                <h3 className="text-xl font-bold text-primary mb-2">Bebidas</h3>
-                <div className="text-sm text-gray-500 mt-2">Clique para ver o PDF</div>
-              </a>
-              
-              <a 
-                href="#" 
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px] mx-auto w-full"
-                onClick={(e) => {
-                  e.preventDefault();
-                  alert('PDF de Menu de Bar em breve disponível');
+                  alert('PDF de Menu de Cocktails em breve disponível');
                 }}
               >
                 <h3 className="text-xl font-bold text-primary mb-2">Cocktails</h3>
@@ -174,6 +124,59 @@ const Menu: React.FC = () => {
           
           {activeCategory === "eventos" && (
             <div className="mb-8 p-6 bg-[#FDF5E6] rounded-lg shadow-md">
+              {/* Menu Boxes */}
+              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-8 place-items-center">
+                <a 
+                  href="/docs/BENCAO_DAS_FITAS_2022.pdf" 
+                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px] mx-auto w-full"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <h3 className="text-xl font-bold text-primary mb-2">Menu Universitário</h3>
+                  <div className="text-sm text-gray-500 mt-2">Clique para ver o PDF</div>
+                </a>
+                
+                <a 
+                  href="/docs/Menus_Aniversario.pdf" 
+                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px] mx-auto w-full"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <h3 className="text-xl font-bold text-primary mb-2">Menus de Aniversário</h3>
+                  <div className="text-sm text-gray-500 mt-2">Clique para ver o PDF</div>
+                </a>
+                
+                <a 
+                  href="/docs/Menus_Natal.pdf" 
+                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px] mx-auto w-full"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <h3 className="text-xl font-bold text-primary mb-2">Menus de Natal</h3>
+                  <div className="text-sm text-gray-500 mt-2">Clique para ver o PDF</div>
+                </a>
+                
+                <a 
+                  href="/docs/Menus_Casamento.pdf" 
+                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px] mx-auto w-full"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <h3 className="text-xl font-bold text-primary mb-2">Menus de Casamento</h3>
+                  <div className="text-sm text-gray-500 mt-2">Clique para ver o PDF</div>
+                </a>
+                
+                <a 
+                  href="/docs/Menus_Batizado.pdf" 
+                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px] mx-auto w-full"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <h3 className="text-xl font-bold text-primary mb-2">Menus de Batizado</h3>
+                  <div className="text-sm text-gray-500 mt-2">Clique para ver o PDF</div>
+                </a>
+              </div>
+              
               <h3 className="text-2xl font-bold mb-4 text-center">Informações Importantes para Eventos</h3>
               
               {/* Seção de Sinal */}
@@ -216,69 +219,6 @@ const Menu: React.FC = () => {
               <div className="p-4 bg-gray-50 rounded-lg">
                 <p className="font-semibold">NOTA:</p>
                 <p>O pagamento total será efectuado pelo responsável da marcação da mesa, não aceitamos pagamentos individuais.</p>
-              </div>
-              
-              {/* Menu Boxes */}
-              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-8 place-items-center">
-                <a 
-                  href="#" 
-                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px] mx-auto w-full"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    alert('PDF de Menus Universitários em breve disponível');
-                  }}
-                >
-                  <h3 className="text-xl font-bold text-primary mb-2">Menus Universitários</h3>
-                  <div className="text-sm text-gray-500 mt-2">Clique para ver o PDF</div>
-                </a>
-                
-                <a 
-                  href="#" 
-                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px]"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    alert('PDF de Menus de Aniversário em breve disponível');
-                  }}
-                >
-                  <h3 className="text-xl font-bold text-primary mb-2">Menus de Aniversário</h3>
-                  <div className="text-sm text-gray-500 mt-2">Clique para ver o PDF</div>
-                </a>
-                
-                <a 
-                  href="#" 
-                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px]"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    alert('PDF de Menus de Natal em breve disponível');
-                  }}
-                >
-                  <h3 className="text-xl font-bold text-primary mb-2">Menus de Natal</h3>
-                  <div className="text-sm text-gray-500 mt-2">Clique para ver o PDF</div>
-                </a>
-                
-                <a 
-                  href="#" 
-                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px]"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    alert('PDF de Menus de Casamento em breve disponível');
-                  }}
-                >
-                  <h3 className="text-xl font-bold text-primary mb-2">Menus de Casamento</h3>
-                  <div className="text-sm text-gray-500 mt-2">Clique para ver o PDF</div>
-                </a>
-                
-                <a 
-                  href="#" 
-                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px]"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    alert('PDF de Menu de Batizado em breve disponível');
-                  }}
-                >
-                  <h3 className="text-xl font-bold text-primary mb-2">Menu de Batizado</h3>
-                  <div className="text-sm text-gray-500 mt-2">Clique para ver o PDF</div>
-                </a>
               </div>
             </div>
           )}

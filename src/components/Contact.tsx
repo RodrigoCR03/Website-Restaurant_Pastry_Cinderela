@@ -1,6 +1,14 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Clock, Instagram, Facebook } from 'lucide-react';
 
+// Custom Glovo icon component
+const GlovoIcon: React.FC<{ size?: number, className?: string }> = ({ size = 24, className = '' }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="currentColor"/>
+    <path d="M15 8L9 12L15 16V8Z" fill="currentColor"/>
+  </svg>
+);
+
 const Contact: React.FC = () => {
   return (
     <section id="contact" className="py-16 bg-light">
@@ -81,6 +89,15 @@ const Contact: React.FC = () => {
                     aria-label="Instagram"
                   >
                     <Instagram size={24} />
+                  </a>
+                  <a 
+                    href="https://glovoapp.com/pt/pt/lisboa/cinderela-lis/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-primary hover:text-secondary transition-colors" 
+                    aria-label="Glovo"
+                  >
+                    <GlovoIcon size={24} />
                   </a>
                 </div>
               </div>

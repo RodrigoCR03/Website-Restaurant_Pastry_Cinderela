@@ -15,40 +15,65 @@ type Testimonial = {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Maria Silva",
-    role: "Cliente Regular",
-    content: "O Cinderela é o meu restaurante favorito em Lisboa! A comida é autêntica e deliciosa, e o serviço é sempre impecável. Recomendo especialmente o bacalhau à lagareiro.",
-    rating: 5,
-    image: "/images/71568794_2600412603353747_7893530285180977152_n.jpg"
+    name: "Paulo Teixeira",
+    role: "Cliente Google",
+    content: "Um lugar onde se come muito bem. Um ponto de encontro para amigos e familiares, sempre em boa companhia e com muita simpatia. Visitem que vale a pena. Top mesmo.",
+    rating: 5
   },
   {
     id: 2,
-    name: "João Pereira",
-    role: "Visitante",
-    content: "Visitei o Cinderela durante as minhas férias em Portugal e fiquei impressionado com a qualidade da comida. Os pastéis de nata são os melhores que já provei!",
-    rating: 5,
-    image: "/images/82423185_2847850305276641_815238905073762304_n.jpg"
+    name: "Neward",
+    role: "Cliente Google",
+    content: "Foi uma ótima experiência, estivemos em grupo, para despedidas, e fomos muito bem recebidos. O atendimento foi ótimo e as bebidas foram um grande diferencial. Já tarde da noite, chegou outro grupo mas mesmo assim a qualidade do serviço não diminuiu.",
+    rating: 5
   },
   {
     id: 3,
-    name: "Ana Martins",
-    role: "Moradora Local",
-    content: "Frequento o Cinderela há mais de 10 anos e nunca me desiludiu. A pastelaria é sempre fresca e os pratos principais são preparados com ingredientes de qualidade.",
-    rating: 4,
-    image: "/images/295099250_5487887607939551_8219764985073025120_n.jpg"
+    name: "Teresa Mourão",
+    role: "Cliente Google",
+    content: "Vim a este restaurante jantar, sendo que é necessário realizar pré-pagamento. O menu incluía entradas, um prato de peixe, um prato de carne e buffet de sobremesas. Ideal para receber grupos grandes. O ambiente é descontraído e os funcionários são simpáticos. Tem uma boa localização em relação a transportes públicos.",
+    rating: 4
   },
   {
     id: 4,
-    name: "António Costa",
-    role: "Empresário",
-    content: "Excelente local para reuniões de negócios. O ambiente é acolhedor, a comida é excelente e o serviço é rápido. O buffet ao almoço tem uma excelente relação qualidade-preço.",
+    name: "Marco Pinto",
+    role: "Cliente Google",
+    content: "Um local que já conta com alguma história e tradição académica em Lisboa. Foi recentemente restaurado estando atualmente com um aspeto novo e atual. Tem dois pisos e aceitam reservas para os mais variados jantares. Tem a possibilidade de comer a la carte, buffet ou escolhendo um dos variados menus para grupos. Vendem tabaco e aceitam pagamentos com multibanco. O staff é simpático e a comida é variada e bem confeccionada, não sendo no entanto um restaurante famoso pela sua gastronomia, mas sim pela capacidade de receber grandes grupos. Localizado numa zona com bastantes acessos e aberto até à meia noite.",
     rating: 5
   },
   {
     id: 5,
-    name: "Carla Santos",
-    role: "Turista",
-    content: "Descobri este restaurante por acaso e que sorte a minha! A comida portuguesa autêntica servida aqui é simplesmente maravilhosa. Voltarei certamente na minha próxima visita.",
+    name: "Vera Jacobetty",
+    role: "Cliente Google",
+    content: "Óptima Pastelaria com empregados sempre muito simpáticos. É onde vou comprar o meu Bolo Rainha todos os anos. Também servem refeições e já experimentei o Buffet. Boa sopa, boa Carne e boas sobremesas. Pena é a zona que é péssima para estacionar o carro. Aconselho a ir cedo para encomendas e se possível levar um acompanhante para esperar no carro",
+    rating: 5
+  },
+  {
+    id: 6,
+    name: "Jorge Neto",
+    role: "Cliente Google",
+    content: "Pastelaria e Restaurante. Boa qualidade e bom ambiente. Atendimento a mesa. Tem pequena esplanada p/ fumadores e não só mas também.",
+    rating: 5
+  },
+  {
+    id: 7,
+    name: "Alex Partida",
+    role: "Cliente Google",
+    content: "Boa comida, bom vinho, bons preços.",
+    rating: 5
+  },
+  {
+    id: 8,
+    name: "Jimmy Allen",
+    role: "Cliente Google",
+    content: "Ótimas pessoas e vibrações ainda melhores. Para quem vem a Lisboa, não se vai realmente a Lisboa se não se sentar na Cinderela e ficar maluco. Antiguidade moderna.",
+    rating: 5
+  },
+  {
+    id: 9,
+    name: "Susana Patricio",
+    role: "Cliente Google",
+    content: "Colaboradores sempre disponíveis. Atendimento perfeito. Bom ambiente. Comida parece caseira.",
     rating: 5
   }
 ];
