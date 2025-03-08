@@ -168,7 +168,7 @@ const Gallery: React.FC = () => {
         >
           <h2 className="section-title">A Nossa Galeria</h2>
           <p className="max-w-2xl mx-auto text-gray-600">
-            Explore os alguns dos muitos momentos especiais no Restaurante & Pastelaria Cinderela de Entrecampos.
+            Explore alguns dos muitos momentos especiais no Restaurante & Pastelaria Cinderela de Entrecampos.
           </p>
         </motion.div>
         
