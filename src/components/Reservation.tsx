@@ -15,6 +15,20 @@ const Reservation: React.FC = () => {
     message: ''
   });
 
+  // Function to check if user is on a mobile device
+  const isMobileDevice = () => {
+    return (
+      typeof window !== 'undefined' &&
+      (navigator.userAgent.match(/Android/i) ||
+        navigator.userAgent.match(/webOS/i) ||
+        navigator.userAgent.match(/iPhone/i) ||
+        navigator.userAgent.match(/iPad/i) ||
+        navigator.userAgent.match(/iPod/i) ||
+        navigator.userAgent.match(/BlackBerry/i) ||
+        navigator.userAgent.match(/Windows Phone/i))
+    );
+  };
+
   // Function to generate WhatsApp message with reservation details
   const generateWhatsAppLink = (data: typeof formData) => {
     const whatsappNumber = '+351939235424'; // The provided WhatsApp number
@@ -25,7 +39,7 @@ const Reservation: React.FC = () => {
     // Encode the message for URL
     const encodedMessage = encodeURIComponent(message);
     
-    // Generate the WhatsApp link
+    // Generate the WhatsApp link based on device type
     return `https://wa.me/${whatsappNumber.replace(/\+/g, '')}?text=${encodedMessage}`;
   };
 
@@ -66,7 +80,14 @@ const Reservation: React.FC = () => {
         
         // Redirect to WhatsApp after a short delay to allow user to see success message
         setTimeout(() => {
-          window.open(whatsappLink, '_blank');
+          // Use the isMobileDevice function to determine how to open WhatsApp
+          if (isMobileDevice()) {
+            // On mobile, directly navigate to the WhatsApp link
+            window.location.href = whatsappLink;
+          } else {
+            // On desktop, open in a new tab
+            window.open(whatsappLink, '_blank');
+          }
         }, 1500);
       } else {
         const data = await response.json();
