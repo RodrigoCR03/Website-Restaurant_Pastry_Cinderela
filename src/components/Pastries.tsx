@@ -3,35 +3,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const categories = [
   'Todos',
-  'Tradicionais',
   'Bolos de Aniversário',
   'Doces de Natal'
 ];
 
 const pastries = [
   {
-    name: "Pastel de Nata",
-    image: "/images/IMG-20250304-WA0003.jpg",
-    description: "Massa folhada crocante recheada com creme de leite e polvilhada com canela",
-    category: "Tradicionais"
-  },
-  {
     name: "Bolo Rei de Chocolate",
     image: "/images/470881033_9100669876661288_425584432431487969_n.jpg",
     description: "Como seria o Natal sem o irresistível Bolo Rei de Chocolate",
     category: "Doces de Natal"
-  },
-  {
-    name: "Arroz Doce",
-    image: "/images/AvoRosa3.jpg",
-    description: "Tradicional arroz doce português, cremoso e perfumado com canela e casca de limão",
-    category: "Tradicionais"
-  },
-  {
-    name: "Pudim de Ovos",
-    image: "/images/UB5A6262-2-1050x1313.jpg",
-    description: "Delicioso pudim de ovos caseiro com calda de caramelo",
-    category: "Tradicionais"
   },
   {
     name: "Lampreia de Ovos",
@@ -50,24 +31,6 @@ const pastries = [
     image: "/images/Captura de ecrã 2025-03-04 164940Natal.png",
     description: "Delicioso bolo em forma de tronco, recheado com creme e decorado com chocolate",
     category: "Doces de Natal"
-  },
-  {
-    name: "Salame de Chocolate",
-    image: "/images/IMG-20250304-WA0012.jpg",
-    description: "Sobremesa tradicional portuguesa feita com chocolate, bolachas e frutos secos",
-    category: "Tradicionais"
-  },
-  {
-    name: "Bolo de Amêndoa",
-    image: "/images/IMG-20250304-WA0011.jpg",
-    description: "Bolo tradicional português feito com amêndoas moídas, leve e aromático",
-    category: "Tradicionais"
-  },
-  {
-    name: "Delícia Folhada & Jesuíta",
-    image: "/images/IMG-20250304-WA0005.jpg",
-    description: "Duo de doces folhados: delícia com creme suave e jesuíta com cobertura de amêndoa",
-    category: "Tradicionais"
   },
   {
     name: "Bolo de Aniversário de Frutos-Vermelhos",

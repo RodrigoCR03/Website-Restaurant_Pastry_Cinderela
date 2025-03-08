@@ -105,7 +105,7 @@ const Hero: React.FC = () => {
             className="text-lg md:text-xl text-white mb-8"
             variants={fadeIn('up', 0.5)}
           >
-            Sabores autênticos da gastronomia portuguesa desde 1995
+            Segunda - Sábado: 07:00 - 00:00
           </motion.p>
           <motion.div
             variants={fadeIn('up', 0.7)}

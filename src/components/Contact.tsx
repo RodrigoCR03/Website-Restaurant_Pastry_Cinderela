@@ -55,6 +55,7 @@ const Contact: React.FC = () => {
                     <h4 className="font-bold text-primary">Morada</h4>
                     <p className="text-gray-600">Av. das Forças Armadas 22</p>
                     <p className="text-gray-600">1600-082 Lisboa, Portugal</p>
+                    <p className="text-gray-600">(Próximo das estações do metro e comboio)</p>
                   </div>
                 </div>
                 

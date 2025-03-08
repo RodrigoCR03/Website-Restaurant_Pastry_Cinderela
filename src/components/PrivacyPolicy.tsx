@@ -166,6 +166,17 @@ const PrivacyPolicy: React.FC = () => {
           <p className="text-gray-600 mb-6">
             Reservamo-nos o direito de atualizar esta Política de Privacidade. As alterações serão publicadas no nosso site restaurantecinderela.pt, e o uso continuado do site após as alterações constitui a aceitação da nova política.
           </p>
+
+          <h3 className="text-xl font-bold text-primary mb-4">12. Resolução de Litígios</h3>
+          <p className="text-gray-600 mb-6">
+            De acordo com a lei144/2015 informamos que em caso de litígio o foro competente será:
+          </p>
+          
+          <ul className="list-disc pl-6 mb-6 text-gray-600">
+            <li>Centro de Arbitragem de Conflitos de Consumo de Lisboa</li>
+            <li>Rua dos Douradores, 116, 2º - 1100-207 LISBOA Tel: 218 807 030</li>
+            <li>E-mail: juridico@centroarbitragemlisboa.pt</li>
+          </ul>
         </div>
       </div>
     </section>

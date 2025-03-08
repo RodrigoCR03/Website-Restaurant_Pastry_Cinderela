@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
 const Menu: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState<string>("petiscos");
+  const [activeCategory, setActiveCategory] = useState<string>("eventos");
   
   const categories = [
+    { id: "eventos", name: "Eventos" },
     { id: "petiscos", name: "Petiscos" },
     { id: "principais", name: "Principais" },
     { id: "especialidades", name: "Especialidades" },
-    { id: "bar", name: "Bar" },
-    { id: "eventos", name: "Eventos" }
+    { id: "bar", name: "Vinhos" }
   ];
   
   return (
@@ -41,12 +41,10 @@ const Menu: React.FC = () => {
           {activeCategory === "petiscos" && (
             <div className="grid grid-cols-1 place-items-center">
               <a 
-                href="#" 
+                href="/docs/Menu_Petiscos.pdf" 
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px] mx-auto w-full max-w-xs"
-                onClick={(e) => {
-                  e.preventDefault();
-                  alert('PDF de Menu de Petiscos em breve disponível');
-                }}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <h3 className="text-xl font-bold text-primary mb-2">Petiscos</h3>
                 <div className="text-sm text-gray-500 mt-2">Clique para ver o PDF</div>
@@ -95,28 +93,14 @@ const Menu: React.FC = () => {
           )}
           
           {activeCategory === "bar" && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 place-items-center max-w-2xl mx-auto">
+            <div className="grid grid-cols-1 place-items-center max-w-xs mx-auto">
               <a 
-                href="#" 
+                href="/docs/Menu_Vinhos.pdf" 
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px] mx-auto w-full"
-                onClick={(e) => {
-                  e.preventDefault();
-                  alert('PDF de Menu de Vinhos em breve disponível');
-                }}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <h3 className="text-xl font-bold text-primary mb-2">Vinhos</h3>
-                <div className="text-sm text-gray-500 mt-2">Clique para ver o PDF</div>
-              </a>
-              
-              <a 
-                href="#" 
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px] mx-auto w-full"
-                onClick={(e) => {
-                  e.preventDefault();
-                  alert('PDF de Menu de Cocktails em breve disponível');
-                }}
-              >
-                <h3 className="text-xl font-bold text-primary mb-2">Cocktails</h3>
                 <div className="text-sm text-gray-500 mt-2">Clique para ver o PDF</div>
               </a>
             </div>

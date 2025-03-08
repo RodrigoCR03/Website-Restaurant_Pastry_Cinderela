@@ -149,6 +149,15 @@ const Footer: React.FC = () => {
             </a>
             <span className="mx-2">|</span>
             <a 
+              href="/fiscal.html" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-secondary transition-colors"
+            >
+              Informações Fiscais
+            </a>
+            <span className="mx-2">|</span>
+            <a 
               href="https://www.livroreclamacoes.pt/Inicio/" 
               target="_blank"
               rel="noopener noreferrer"

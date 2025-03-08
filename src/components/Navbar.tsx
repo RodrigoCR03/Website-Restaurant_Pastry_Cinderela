@@ -76,7 +76,7 @@ const Navbar: React.FC = () => {
               <img 
                 src="/images/logotipo.png" 
                 alt="Cinderela Logo" 
-                className="h-16 transform hover:scale-105 transition-all duration-300 ease-in-out" 
+                className="h-20 transform hover:scale-105 transition-all duration-300 ease-in-out" 
               />
             </a>
             
