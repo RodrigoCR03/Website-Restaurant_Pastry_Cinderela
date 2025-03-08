@@ -55,12 +55,10 @@ const Menu: React.FC = () => {
           {activeCategory === "principais" && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 place-items-center max-w-2xl mx-auto">
               <a 
-                href="#" 
+                href="/docs/Menu_Principais.pdf" 
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px] mx-auto w-full"
-                onClick={(e) => {
-                  e.preventDefault();
-                  alert('PDF de Menu de Pratos Principais em breve disponível');
-                }}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <h3 className="text-xl font-bold text-primary mb-2">Principais</h3>
                 <div className="text-sm text-gray-500 mt-2">Clique para ver o PDF</div>

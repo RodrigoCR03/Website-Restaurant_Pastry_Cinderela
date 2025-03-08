@@ -15,6 +15,20 @@ const Reservation: React.FC = () => {
     message: ''
   });
 
+  // Function to generate WhatsApp message with reservation details
+  const generateWhatsAppLink = (data: typeof formData) => {
+    const whatsappNumber = '+351939235424'; // The provided WhatsApp number
+    
+    // Format the message with reservation details
+    const message = `*Nova Reserva*\n\n*Nome:* ${data.name}\n*Email:* ${data.email}\n*Telefone:* ${data.phone}\n*Data:* ${data.date}\n*Hora:* ${data.time}\n*Número de Pessoas:* ${data.guests}\n${data.message ? `*Mensagem:* ${data.message}` : ''}`;
+    
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Generate the WhatsApp link
+    return `https://wa.me/${whatsappNumber.replace(/\+/g, '')}?text=${encodedMessage}`;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -35,6 +49,11 @@ const Reservation: React.FC = () => {
 
       if (response.ok) {
         setIsSubmitted(true);
+        
+        // Generate WhatsApp link and redirect after successful form submission
+        const whatsappLink = generateWhatsAppLink(formData);
+        
+        // Reset form data
         setFormData({
           name: '',
           email: '',
@@ -44,6 +63,11 @@ const Reservation: React.FC = () => {
           guests: '10',
           message: ''
         });
+        
+        // Redirect to WhatsApp after a short delay to allow user to see success message
+        setTimeout(() => {
+          window.open(whatsappLink, '_blank');
+        }, 1500);
       } else {
         const data = await response.json();
         setError(data.error || 'Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.');
@@ -115,8 +139,11 @@ const Reservation: React.FC = () => {
             <div className="text-center py-8">
               <div className="text-5xl text-green-500 mb-4">✓</div>
               <h3 className="text-2xl font-bold text-[#1C2E4A] mb-2">Reserva Recebida!</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 mb-4">
                 Obrigado pelo seu pedido de reserva. Entraremos em contacto brevemente para confirmar a sua marcação.
+              </p>
+              <p className="text-gray-600 mb-4">
+                A redirecionar para o WhatsApp para enviar os detalhes da reserva...
               </p>
               <button
                 onClick={() => setIsSubmitted(false)}
@@ -282,6 +309,9 @@ const Reservation: React.FC = () => {
                     <span>Enviar Reserva</span>
                   )}
                 </button>
+                <p className="mt-4 text-xs text-gray-500">
+                  Ao enviar, os detalhes da reserva serão enviados por email e WhatsApp para confirmação.
+                </p>
               </div>
             </form>
           )}
