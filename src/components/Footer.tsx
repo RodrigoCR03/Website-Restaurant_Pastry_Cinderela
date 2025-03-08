@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-2xl font-serif font-bold text-secondary mb-4">Cinderela</h3>
+            <h3 className="text-2xl font-serif font-bold text-secondary mb-4">Cinderela de Entrecampos</h3>
             <p className="mb-4 text-gray-300">
               Cozinha portuguesa e pastelaria artesanal no coração de Lisboa.
               Experimente os ricos sabores de Portugal num ambiente acolhedor e convidativo.

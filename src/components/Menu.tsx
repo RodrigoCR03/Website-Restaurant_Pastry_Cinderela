@@ -124,6 +124,39 @@ const Menu: React.FC = () => {
           
           {activeCategory === "eventos" && (
             <div className="mb-8 p-6 bg-[#FDF5E6] rounded-lg shadow-md">
+              {/* Featured University Menu Section */}
+              <div className="mb-8 p-6 bg-primary rounded-lg text-white text-center">
+                <h3 className="text-2xl font-bold mb-4">Destaque: Menu Universitário</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                  <div>
+                    <p className="mb-4">Celebre os seus momentos académicos connosco! Oferecemos menus especiais para:</p>
+                    <ul className="list-none space-y-2 text-left ml-4">
+                      <li className="flex items-center"><span className="text-secondary mr-2">✓</span> Bênção das Fitas</li>
+                      <li className="flex items-center"><span className="text-secondary mr-2">✓</span> Jantares de Curso</li>
+                      <li className="flex items-center"><span className="text-secondary mr-2">✓</span> Convívios Académicos</li>
+                      <li className="flex items-center"><span className="text-secondary mr-2">✓</span> Festas de Finalistas</li>
+                    </ul>
+                    <div className="mt-6">
+                      <a 
+                        href="/docs/BENCAO_DAS_FITAS_2022.pdf" 
+                        className="inline-block bg-secondary text-primary font-bold py-3 px-6 rounded-full hover:bg-white transition-colors duration-300"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Ver Menu Universitário
+                      </a>
+                    </div>
+                  </div>
+                  <div className="hidden md:block">
+                    <img 
+                      src="/images/462258278_3807988702778033_5078099732875333599_n.jpg" 
+                      alt="Momentos Académicos" 
+                      className="rounded-lg shadow-lg w-full h-64 object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+              
               {/* Menu Boxes */}
               <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-8 place-items-center">
                 <a 

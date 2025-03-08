@@ -4,102 +4,142 @@ import { motion } from 'framer-motion';
 import { fadeIn, staggerContainer, zoomIn } from '../utils/animations';
 
 const galleryImages = [
+  // Momentos Académicos Inesquecíveis
   {
-    src: "/images/IMG-20250304-WA0017.jpg",
-    alt: "Momentos especiais no Cinderela"
-  },
-  {
-    src: "/images/IMG-20250304-WA0016.jpg",
-    alt: "Experiências gastronómicas únicas"
-  },
-  {
-    src: "/images/IMG-20250304-WA0018.jpg",
-    alt: "Ambiente acolhedor do restaurante"
-  },
-  {
-    src: "/images/470798816_9085639024831040_5075154299729723081_n.jpg",
-    alt: "Experiência gastronómica portuguesa"
-  },
-  {
-    src: "/images/471212240_9083780598350216_4620509615416171463_n.jpg",
-    alt: "Especialidades da casa"
-  },
-  {
-    src: "/images/470137426_9055215441206732_3026385478431515673_n.jpg",
-    alt: "Pratos típicos portugueses"
-  },
-  {
-    src: "/images/71568794_2600412603353747_7893530285180977152_n.jpg",
-    alt: "Momentos especiais no Cinderela"
+    src: "/images/462258278_3807988702778033_5078099732875333599_n.jpg",
+    alt: "Momentos Académicos Inesquecíveis"
   },
   {
     src: "/images/57154534_2323533821032941_7037100582154272768_n.jpg",
-    alt: "Tradição e qualidade no Cinderela"
+    alt: "Momentos Académicos Inesquecíveis"
   },
   {
-    src: "/images/471435025_9166740933387515_6565691308498729452_n.jpg",
-    alt: "Gastronomia portuguesa no seu melhor"
+    src: "/images/52592624_2214161625312182_5072175863395516416_n.jpg",
+    alt: "Momentos Académicos Inesquecíveis"
   },
   {
-    src: "/images/472225853_9141959952532280_3806924327252153959_n.jpg",
-    alt: "Sabores autênticos portugueses"
+    src: "/images/71380594_2622287421166265_2037420322151464960_n.jpg",
+    alt: "Momentos Académicos Inesquecíveis"
   },
   {
-    src: "/images/448594631_7916137771781177_6968230560924564767_n.jpg",
-    alt: "Experiência culinária única"
+    src: "/images/465053671_8798525883542357_1251735962029844238_n.jpg",
+    alt: "Momentos Académicos Inesquecíveis"
   },
   {
-    src: "/images/443716016_7749532231775066_6750533162037137797_n.jpg",
-    alt: "Momentos gastronómicos no Cinderela"
+    src: "/images/465123492_8798554313539514_1277494827060319143_n.jpg",
+    alt: "Momentos Académicos Inesquecíveis"
   },
   {
-    src: "/images/436907319_7594177130643911_5218796424270003036_n.jpg",
-    alt: "Pratos tradicionais portugueses"
+    src: "/images/71498229_2606194039442270_1467184154280984576_n.jpg",
+    alt: "Momentos Académicos Inesquecíveis"
   },
   {
-    src: "/images/132633406_3754802351248094_4540047659558004573_n.jpg",
-    alt: "Ambiente acolhedor do restaurante"
-  },
-  {
-    src: "/images/363452103_6627035530691414_301000128759262619_n.jpg",
-    alt: "Especialidade da casa"
-  },
-  {
-    src: "/images/346466904_2187631314770834_8963888581703757855_n.jpg",
-    alt: "Pratos deliciosos do Cinderela"
-  },
-  {
-    src: "/images/295099250_5487887607939551_8219764985073025120_n.jpg",
-    alt: "Momento especial no Cinderela"
-  },
-  {
-    src: "/images/470881033_9100669876661288_425584432431487969_n.jpg",
-    alt: "Bolo Rei de Chocolate"
+    src: "/images/70978840_2728519657209707_5271319576922030080_n.jpg",
+    alt: "Momentos Académicos Inesquecíveis"
   },
   {
     src: "/images/475896413_9314867945241479_1329711212415206935_n.jpg",
-    alt: "Sabores únicos de Portugal"
+    alt: "Momentos Académicos Inesquecíveis"
   },
+  // Momentos Especiais
   {
-    src: "/images/470868009_9072296342831975_5077639077277876139_n.jpg",
-    alt: "Gastronomia tradicional portuguesa"
-  },
-  {
-    src: "/images/204011364_4252370664824591_3372468539489034191_n.jpg",
-    alt: "Pratos típicos do Cinderela"
-  },
-  {
-    src: "/images/188539220_4162371707157821_1750132819983852316_n.jpg",
-    alt: "Tradição e qualidade na cozinha"
-  },
-  {
-    src: "/images/183600892_4128708567190802_684146871855558555_n.jpg",
-    alt: "Momentos especiais no restaurante"
+    src: "/images/62364382_2389620041099672_2964490842649133056_n.jpg",
+    alt: "Momentos Especiais"
   },
   {
     src: "/images/82423185_2847850305276641_815238905073762304_n.jpg",
-    alt: "Experiência gastronómica única"
-  }
+    alt: "Momentos Especiais"
+  },
+  {
+    src: "/images/448594631_7916137771781177_6968230560924564767_n.jpg",
+    alt: "Momentos Especiais"
+  },
+  {
+    src: "/images/346466904_2187631314770834_8963888581703757855_n.jpg",
+    alt: "Momentos Especiais"
+  },
+  {
+    src: "/images/443716016_7749532231775066_6750533162037137797_n.jpg",
+    alt: "Momentos Especiais"
+  },
+  {
+    src: "/images/71568794_2600412603353747_7893530285180977152_n.jpg",
+    alt: "Momentos Especiais"
+  },
+  {
+    src: "/images/72365810_2642702875791386_2900689030452609024_n.jpg",
+    alt: "Momentos Especiais"
+  },
+  {
+    src: "/images/67528032_2463369033724772_6748630392208621568_n.jpg",
+    alt: "Momentos Especiais"
+  },
+  {
+    src: "/images/62433807_2385964421465234_5358958393186844672_n.jpg",
+    alt: "Momentos Especiais"
+  },
+  {
+    src: "/images/107039196_3268644906530510_8307745193904691013_n.jpg",
+    alt: "Momentos Especiais"
+  },
+  {
+    src: "/images/118537276_3426272940767705_2950302828037540808_n.jpg",
+    alt: "Momentos Especiais"
+  },
+  // Momentos Especiais
+  {
+    src: "/images/132428288_3749515101776819_1675201730182194239_n.jpg",
+    alt: "Momentos Especiais"
+  },
+  {
+    src: "/images/52602967_2203978866330458_855976777250504704_n.jpg",
+    alt: "Momentos Especiais"
+  },
+  {
+    src: "/images/IMG-20250304-WA0017.jpg",
+    alt: "Especialidades da Cinderela"
+  },
+  {
+    src: "/images/471212240_9083780598350216_4620509615416171463_n.jpg",
+    alt: "Especialidades da Cinderela"
+  },
+  {
+    src: "/images/470137426_9055215441206732_3026385478431515673_n.jpg",
+    alt: "Especialidades da Cinderela"
+  },
+  {
+    src: "/images/436907319_7594177130643911_5218796424270003036_n.jpg",
+    alt: "Especialidades da Cinderela"
+  },
+  {
+    src: "/images/132633406_3754802351248094_4540047659558004573_n.jpg",
+    alt: "Especialidades da Cinderela"
+  },
+  {
+    src: "/images/363452103_6627035530691414_301000128759262619_n.jpg",
+    alt: "Momentos Especiais"
+  },
+  {
+    src: "/images/295099250_5487887607939551_8219764985073025120_n.jpg",
+    alt: "Especialidades da Cinderela"
+  },
+  {
+    src: "/images/470868009_9072296342831975_5077639077277876139_n.jpg",
+    alt: "Especialidades da Cinderela"
+  },
+  {
+    src: "/images/204011364_4252370664824591_3372468539489034191_n.jpg",
+    alt: "Especialidades da Cinderela"
+  },
+  {
+    src: "/images/188539220_4162371707157821_1750132819983852316_n.jpg",
+    alt: "Especialidades da Cinderela"
+  },
+  {
+    src: "/images/183600892_4128708567190802_684146871855558555_n.jpg",
+    alt: "Especialidades da Cinderela"
+  },
+
 ];
 
 const Gallery: React.FC = () => {
@@ -128,7 +168,7 @@ const Gallery: React.FC = () => {
         >
           <h2 className="section-title">A Nossa Galeria</h2>
           <p className="max-w-2xl mx-auto text-gray-600">
-            Explore os momentos especiais e as deliciosas criações do Restaurante & Pastelaria Cinderela.
+            Explore os alguns dos muitos momentos especiais no Restaurante & Pastelaria Cinderela de Entrecampos.
           </p>
         </motion.div>
         

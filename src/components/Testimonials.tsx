@@ -124,7 +124,7 @@ const Testimonials: React.FC = () => {
         >
           <h2 className="section-title">O Que Dizem os Nossos Clientes</h2>
           <p className="max-w-2xl mx-auto text-gray-600">
-            Descubra o que os nossos clientes têm a dizer sobre a sua experiência no Restaurante & Pastelaria Cinderela.
+            Descubra o que os nossos clientes têm a dizer sobre a sua experiência no Restaurante & Pastelaria Cinderela de Entrecampos.
           </p>
         </motion.div>
 
@@ -177,24 +177,6 @@ const Testimonials: React.FC = () => {
               </motion.div>
             ))}
           </motion.div>
-
-          {/* Navigation arrows */}
-          <motion.button 
-            onClick={prevTestimonial}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-1/2 md:-translate-x-6 bg-white shadow-lg text-primary p-3 rounded-full z-10"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <ChevronLeft size={24} />
-          </motion.button>
-          <motion.button 
-            onClick={nextTestimonial}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2 md:translate-x-6 bg-white shadow-lg text-primary p-3 rounded-full z-10"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <ChevronRight size={24} />
-          </motion.button>
 
           {/* Indicators */}
           <div className="flex justify-center mt-6 space-x-2">

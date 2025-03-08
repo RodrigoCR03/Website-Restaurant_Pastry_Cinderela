@@ -58,12 +58,6 @@ const pastries = [
     category: "Tradicionais"
   },
   {
-    name: "Bolo de Chocolate",
-    image: "/images/IMG-20250304-WA0008.jpg",
-    description: "Bolo húmido de chocolate com cobertura de ganache e decoração artesanal",
-    category: "Bolos de Aniversário"
-  },
-  {
     name: "Bolo de Amêndoa",
     image: "/images/IMG-20250304-WA0011.jpg",
     description: "Bolo tradicional português feito com amêndoas moídas, leve e aromático",

@@ -91,12 +91,18 @@ const Hero: React.FC = () => {
           variants={fadeIn('up', 0.3)}
         >
           <motion.h1 
-            className="text-4xl md:text-6xl font-bold text-white mb-4"
-          >
-            Restaurante & Pastelaria <span className="text-secondary">Cinderela</span>
+            className="text-4xl md:text-6xl font-bold text-white mb-2 font-serif italic tracking-wide"
+            >
+            <span className="text-secondary">Cinderela de Entrecampos</span>
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl text-white mb-8"
+            variants={fadeIn('up', 0.5)}
+          >
+            Restaurante & Pastelaria
+          </motion.p>
+          <motion.p 
+            className="text-lg md:text-xl text-white mb-8"
             variants={fadeIn('up', 0.5)}
           >
             Sabores autênticos da gastronomia portuguesa desde 1995
@@ -105,14 +111,14 @@ const Hero: React.FC = () => {
             variants={fadeIn('up', 0.7)}
           >
             <motion.button 
-              onClick={() => scrollToSection('reservation')}
+              onClick={() => scrollToSection('gallery')}
               className="btn-secondary mr-4 mb-4 md:mb-0"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               variants={pulseAnimation}
               animate="pulse"
             >
-              Reservar Mesa
+              Galeria
             </motion.button>
             <motion.button 
               onClick={() => scrollToSection('menu')}
