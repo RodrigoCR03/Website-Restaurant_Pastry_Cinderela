@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
     <section id="home" className="relative h-screen">
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/Captura de ecrã 2025-03-04 165345Espaco.png')" }}
+        style={{ backgroundImage: "url('/images/Imagem WhatsApp 2025-03-04 às 22.25.37_dcbb5c26.jpg')" }}
       >
         <div className="absolute inset-0 bg-primary bg-opacity-70"></div>
       </div>
