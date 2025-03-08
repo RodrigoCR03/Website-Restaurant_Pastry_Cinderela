@@ -5,6 +5,7 @@ import About from './components/About';
 import Menu from './components/Menu';
 import Pastries from './components/Pastries';
 import Gallery from './components/Gallery';
+import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Reservation from './components/Reservation';
 import Footer from './components/Footer';
@@ -21,6 +22,7 @@ const App: React.FC = () => {
       <Menu />
       <Pastries />
       <Gallery />
+      <Testimonials />
       <Contact />
       <Reservation />
       <Footer />

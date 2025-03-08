@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import useSmoothScroll from '../hooks/useSmoothScroll';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { fadeIn, pulseAnimation } from '../utils/animations';
 
 const Hero: React.FC = () => {
   const { scrollToSection } = useSmoothScroll();
@@ -15,10 +17,6 @@ const Hero: React.FC = () => {
     {
       src: "/images/Imagem WhatsApp 2025-03-08 às 00.13.26_cfcac16e.jpg",
       alt: "Restaurante Cinderela"
-    },
-    {
-      src: "/images/IMG-20250304-WA0010.jpg",
-      alt: "Especialidades do Restaurante Cinderela"
     },
     {
       src: "/images/IMG-20250304-WA0016.jpg",
@@ -53,7 +51,7 @@ const Hero: React.FC = () => {
     }, 3000);
     
     return () => clearInterval(interval);
-  }, []);
+  }, [nextSlide]);
 
   return (
     <section id="home" className="relative h-screen">
@@ -69,60 +67,81 @@ const Hero: React.FC = () => {
         ))}
         
         {/* Navigation arrows */}
-        <button 
+        <motion.button 
           onClick={prevSlide}
           className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-secondary bg-opacity-70 hover:bg-opacity-90 text-white p-3 rounded-full transition-all duration-300 z-10"
           aria-label="Imagem anterior"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
         >
           <ChevronLeft size={24} />
-        </button>
-        <button 
+        </motion.button>
+        <motion.button 
           onClick={nextSlide}
           className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-secondary bg-opacity-70 hover:bg-opacity-90 text-white p-3 rounded-full transition-all duration-300 z-10"
           aria-label="Próxima imagem"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
         >
           <ChevronRight size={24} />
-        </button>
+        </motion.button>
         
         {/* Indicators */}
         <div className="absolute bottom-8 left-0 right-0 flex justify-center space-x-3 z-10">
           {images.map((_, index) => (
-            <button
+            <motion.button
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide ? 'bg-secondary' : 'bg-white bg-opacity-60'}`}
               aria-label={`Ir para slide ${index + 1}`}
+              whileHover={{ scale: 1.5 }}
             />
           ))}
         </div>
       </div>
       
       <div className="relative h-full flex items-center justify-center text-center px-4">
-        <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-6xl font-serif font-bold text-white mb-4">
-            <span className="block">Cinderela de Entrecampos</span>
-            <span className="text-secondary">Restaurante & Pastelaria</span>
-          </h1>
-          <p className="text-lg md:text-xl text-light mb-8">
-            Experimente os ricos sabores de Portugal no coração de Lisboa
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a 
-              href="#menu" 
-              onClick={(e) => scrollToSection(e, 'menu')}
-              className="btn-secondary"
+        <motion.div 
+          className="max-w-4xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn('up', 0.3)}
+        >
+          <motion.h1 
+            className="text-4xl md:text-6xl font-bold text-white mb-4"
+          >
+            Restaurante & Pastelaria <span className="text-secondary">Cinderela</span>
+          </motion.h1>
+          <motion.p 
+            className="text-xl md:text-2xl text-white mb-8"
+            variants={fadeIn('up', 0.5)}
+          >
+            Sabores autênticos da gastronomia portuguesa desde 1995
+          </motion.p>
+          <motion.div
+            variants={fadeIn('up', 0.7)}
+          >
+            <motion.button 
+              onClick={() => scrollToSection('reservation')}
+              className="btn-secondary mr-4 mb-4 md:mb-0"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              variants={pulseAnimation}
+              animate="pulse"
             >
-              Ver a Nossa Ementa
-            </a>
-            <a 
-              href="#reservation" 
-              onClick={(e) => scrollToSection(e, 'reservation')}
+              Reservar Mesa
+            </motion.button>
+            <motion.button 
+              onClick={() => scrollToSection('menu')}
               className="btn-primary"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              Fazer Reserva
-            </a>
-          </div>
-        </div>
+              Ver Menu
+            </motion.button>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

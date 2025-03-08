@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { X } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { fadeIn, staggerContainer, zoomIn } from '../utils/animations';
 
 const galleryImages = [
   {
@@ -97,188 +99,105 @@ const galleryImages = [
   {
     src: "/images/82423185_2847850305276641_815238905073762304_n.jpg",
     alt: "Experiência gastronómica única"
-  },
-  {
-    src: "/images/135852911_3787307171330945_5727389573875374983_n.jpg",
-    alt: "Sabores autênticos portugueses"
-  },
-  {
-    src: "/images/136658678_3787216411340021_8129164563763993682_n.jpg",
-    alt: "Tradição portuguesa na cozinha"
-  },
-  {
-    src: "/images/132747338_3755363351191994_1536272411686920328_n.jpg",
-    alt: "Ambiente acolhedor e familiar"
-  },
-  {
-    src: "/images/132428288_3749515101776819_1675201730182194239_n.jpg",
-    alt: "Momentos únicos com os clientes"
-  },
-  {
-    src: "/images/123296527_3607502159311448_6696524829656636373_n.jpg",
-    alt: "Pratos especiais do dia"
-  },
-  {
-    src: "/images/120459379_3516897705038561_3341209099923319315_n.jpg",
-    alt: "Experiências gastronómicas memoráveis"
-  },
-  {
-    src: "/images/118537276_3426272940767705_2950302828037540808_n.jpg",
-    alt: "Tradição culinária no Cinderela"
-  },
-  {
-    src: "/images/118309576_4740694492611177_2643396005104335448_n.jpg",
-    alt: "Momentos especiais na cozinha"
-  },
-  {
-    src: "/images/107039196_3268644906530510_8307745193904691013_n.jpg",
-    alt: "Sabores únicos do Cinderela"
-  },
-  {
-    src: "/images/105285440_3214841525244182_3134958986738293441_n.jpg",
-    alt: "Pratos tradicionais do dia"
-  },
-  {
-    src: "/images/465053671_8798525883542357_1251735962029844238_n.jpg",
-    alt: "Experiência única no Cinderela"
-  },
-  {
-    src: "/images/70978840_2728519657209707_5271319576922030080_n.jpg",
-    alt: "Momentos gastronómicos especiais"
-  },
-  {
-    src: "/images/76776575_2702047506523589_257801469162422272_n.jpg",
-    alt: "Tradição e qualidade no serviço"
-  },
-  {
-    src: "/images/72365810_2642702875791386_2900689030452609024_n.jpg",
-    alt: "Sabores autênticos de Portugal"
-  },
-  {
-    src: "/images/72051579_2633877373340603_3340392882975539200_n.jpg",
-    alt: "Especialidades portuguesas"
-  },
-  {
-    src: "/images/71380594_2622287421166265_2037420322151464960_n.jpg",
-    alt: "Pratos deliciosos do dia"
-  },
-  {
-    src: "/images/71498229_2606194039442270_1467184154280984576_n.jpg",
-    alt: "Ambiente familiar do Cinderela"
-  },
-  {
-    src: "/images/69578678_2562016823859992_139407543142187008_n.jpg",
-    alt: "Momentos especiais com os clientes"
-  },
-  {
-    src: "/images/67601808_2500248366703505_6405839161005178880_n.jpg",
-    alt: "Experiências gastronómicas únicas"
-  },
-  {
-    src: "/images/67550340_2496288343766174_6906567712755941376_n.jpg",
-    alt: "Sabores tradicionais do Cinderela"
-  },
-  {
-    src: "/images/67528032_2463369033724772_6748630392208621568_n.jpg",
-    alt: "Tradição culinária portuguesa"
-  },
-  {
-    src: "/images/66113271_2425071717554504_4183798471339278336_n.jpg",
-    alt: "Pratos típicos portugueses"
-  },
-  {
-    src: "/images/62364382_2389620041099672_2964490842649133056_n.jpg",
-    alt: "Gastronomia portuguesa no Cinderela"
-  },
-  {
-    src: "/images/62433807_2385964421465234_5358958393186844672_n.jpg",
-    alt: "Momentos únicos no Cinderela"
-  },
-  {
-    src: "/images/465123492_8798554313539514_1277494827060319143_n.jpg",
-    alt: "Especialidades da casa"
-  },
-  {
-    src: "/images/462258278_3807988702778033_5078099732875333599_n.jpg",
-    alt: "Sabores autênticos do Cinderela"
-  },
-  {
-    src: "/images/52592624_2214161625312182_5072175863395516416_n.jpg",
-    alt: "Pratos tradicionais portugueses"
-  },
-  {
-    src: "/images/52602967_2203978866330458_855976777250504704_n.jpg",
-    alt: "Experiência gastronómica no Cinderela"
-  },
-  {
-    src: "/images/49103468_2133445556717123_3130174952758575104_n.jpg",
-    alt: "Ambiente acolhedor do Cinderela"
-  },
-  {
-    src: "/images/49667073_2133445493383796_8687134306113421312_n.jpg",
-    alt: "Momentos especiais no Cinderela"
-  },
-  {
-    src: "/images/Captura de ecrã 2025-03-04 165447Mesa.png",
-    alt: "Mesa preparada no Restaurante Cinderela"
-  },
-  {
-    src: "/images/Captura de ecrã 2025-03-04 164940Natal.png",
-    alt: "Decoração de Natal no Cinderela"
   }
 ];
 
 const Gallery: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  const openModal = (src: string) => {
+    setSelectedImage(src);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+    document.body.style.overflow = 'auto';
+  };
+
   return (
     <section id="gallery" className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="section-title">Galeria</h2>
+        <motion.div 
+          className="text-center mb-12"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={fadeIn('up', 0.3)}
+        >
+          <h2 className="section-title">A Nossa Galeria</h2>
           <p className="max-w-2xl mx-auto text-gray-600">
-            Faça uma viagem visual pelo nosso restaurante e descubra os nossos deliciosos pratos e ambiente acolhedor.
+            Explore os momentos especiais e as deliciosas criações do Restaurante & Pastelaria Cinderela.
           </p>
-        </div>
+        </motion.div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <motion.div 
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
           {galleryImages.map((image, index) => (
-            <div 
+            <motion.div 
               key={index} 
-              className="relative overflow-hidden rounded-lg cursor-pointer h-64"
-              onClick={() => setSelectedImage(image.src)}
+              className="relative overflow-hidden rounded-lg shadow-md aspect-square cursor-pointer"
+              variants={zoomIn(0.1 * (index % 8))}
+              whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+              onClick={() => openModal(image.src)}
             >
               <img 
                 src={image.src} 
                 alt={image.alt} 
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                className="w-full h-full object-cover transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-primary bg-opacity-0 hover:bg-opacity-30 transition-opacity duration-300 flex items-center justify-center">
-                <span className="text-white opacity-0 hover:opacity-100 text-lg font-bold">Ver</span>
-              </div>
-            </div>
+              {hoveredIndex === index && (
+                <motion.div 
+                  className="absolute inset-0 bg-primary bg-opacity-60 flex items-center justify-center p-4"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <p className="text-white text-center text-sm">{image.alt}</p>
+                </motion.div>
+              )}
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-      
-      {/* Lightbox */}
+
+      {/* Modal for full-size image view */}
       {selectedImage && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
-          onClick={() => setSelectedImage(null)}
+        <motion.div 
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
         >
-          <button 
-            className="absolute top-4 right-4 text-white hover:text-secondary transition-colors"
-            onClick={() => setSelectedImage(null)}
+          <motion.div 
+            className="relative max-w-4xl max-h-[90vh] w-full"
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ type: 'spring', damping: 15 }}
           >
-            <X size={32} />
-          </button>
-          <img 
-            src={selectedImage} 
-            alt="Imagem ampliada" 
-            className="max-w-full max-h-[90vh] object-contain"
-          />
-        </div>
+            <motion.button
+              className="absolute top-4 right-4 z-10 bg-secondary rounded-full p-2 text-primary"
+              onClick={closeModal}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <X size={24} />
+            </motion.button>
+            <img 
+              src={selectedImage} 
+              alt="Imagem ampliada" 
+              className="w-full h-full object-contain rounded-lg"
+            />
+          </motion.div>
+        </motion.div>
       )}
     </section>
   );

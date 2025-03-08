@@ -73,9 +73,11 @@ const Navbar: React.FC = () => {
               onClick={(e) => scrollToSection(e, 'home')}
               className="flex items-center"
             >
-              <span className="text-3xl font-serif font-bold text-[#D4AF37] tracking-wide transform hover:scale-105 hover:tracking-wider hover:text-white transition-all duration-300 ease-in-out">
-                Cinderela
-              </span>
+              <img 
+                src="/images/logotipo.png" 
+                alt="Cinderela Logo" 
+                className="h-16 transform hover:scale-105 transition-all duration-300 ease-in-out" 
+              />
             </a>
             
             <div className="hidden md:flex space-x-8">
