@@ -118,7 +118,7 @@ const Hero: React.FC = () => {
               variants={pulseAnimation}
               animate="pulse"
             >
-              Galeria
+              Ver Galeria
             </motion.button>
             <motion.button 
               onClick={() => scrollToSection('menu')}
