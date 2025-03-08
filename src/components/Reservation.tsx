@@ -31,7 +31,7 @@ const Reservation: React.FC = () => {
 
   // Function to generate WhatsApp message with reservation details
   const generateWhatsAppLink = (data: typeof formData) => {
-    const whatsappNumber = '+351939235424'; // The provided WhatsApp number
+    const whatsappNumber = '+351969524991'; // The provided WhatsApp number
     
     // Format the message with reservation details
     const message = `*Nova Reserva*\n\n*Nome:* ${data.name}\n*Email:* ${data.email}\n*Telefone:* ${data.phone}\n*Data:* ${data.date}\n*Hora:* ${data.time}\n*Número de Pessoas:* ${data.guests}\n${data.message ? `*Mensagem:* ${data.message}` : ''}`;
