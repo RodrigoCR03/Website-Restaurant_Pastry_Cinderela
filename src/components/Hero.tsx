@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
   }, [nextSlide]);
 
   return (
-    <section id="home" className="relative h-screen">
+    <section id="home" className="relative h-screen overflow-x-hidden">
       <div className="absolute inset-0 overflow-hidden">
         {images.map((image, index) => (
           <div 
