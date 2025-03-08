@@ -179,47 +179,12 @@ const menuItems: MenuItem[] = [
   { name: "Omelete de Chouriço", description: "Omelete com chouriço", price: "18.50", category: "omelets" },
   { name: "Omelete Mista", description: "Omelete com queijo, presunto e cogumelos", price: "15.00", category: "omelets" },
 
-  // Eventos - Menus de Aniversário (agora primeiro)
-  {
-    name: "Menu 1 de Aniversário",
-    description: "Entradas: Pão Manteiga / Pasta, Paté de atum, Queijo alentejanos, Salgadinhos diversos. | 1º Prato: Bacalhau Espiritual. | 2º Prato: Lombinhos com Cogumelos. | Bebidas: Água, Sumos, Sangria, cerveja, Vinhos: tinto e branco. | Sobremesa: Pudim flan, leite creme, Salada de frutas, Bolo de Chocolate, Bolo de Amêndoa, Bolo de Aniversário. | 1 garrafa de espumante.",
-    price: "27.50",
-    category: "snacks"
-  },
-  {
-    name: "Menu 2 de Aniversário",
-    description: "Entradas: Martini ou moscatel, Pão Manteiga / Pasta, Paté de atum, Bóia de Favalos, Queijinhos alentejanos, Salgadinhos diversos, Ovos mexidos com farinheira. | Quentes: 1º Prato: Bacalhau com Natas, 2º Prato: Bifinhos de Vitela com Cogumelos. | Bebidas: Água, Sumos, Sangria, cerveja, Vinhos: Douro Reserva, tinto e branco. | Mesa de Sobremesas: Pudim flan, leite-creme, Salada de frutas, Bolo de Chocolate, Bolo de Amêndoa. | Café: Porto, Amêndoa Amarga, whisky novo. | Bolo de Aniversário + 1 garrafa de champanhe.",
-    price: "30.00",
-    category: "snacks"
-  },
-  {
-    name: "Menu 3 de Aniversário",
-    description: "Entradas: Martini ou moscatel. | Bebidas: Água, Sumos, Sangria, cerveja. | Vinhos: Dão, tinto e branco. | Entradas: Pão Manteiga, presunto fatiado, Alheira Mirandela, Queijinhos alentejanos, Salgadinhos diversos, Ovos mexidos com farinheira, Camarão flambeado, Santola recheada. | Quentes: 1º Prato: Arroz de Polvo com Camarão, 2º Prato: Vitela à Lafões. | Mesa de Sobremesas: Pudim flan, leite-creme, Salada de frutas, Bolo de Chocolate, Bolo de Amêndoa, Bolo Rei. | Café: 1 G. Porto, 1 G. Amêndoa Amarga.",
-    price: "32.50",
-    category: "snacks"
-  },
+  // Eventos - Placeholder para menus que serão exibidos como PDFs
+  // Os detalhes dos menus foram removidos conforme solicitado
 
-  // Eventos - Menu Académico (segundo)
-  {
-    name: "Menu Académico",
-    description: "Entradas: Pão, manteigas, patês, queijinhos fatiados, Salgadinhos diversos, Presunto fatiado. | Sopa: Creme de cenoura. | Peixes: Bacalhau espiritual com salada juliana, Lombinhos de peixe com salada russa. | Carnes: Lombo de porco assado à padeiro, Nacos de vitela à Beirão. | Sobremesas: Tarte de Amêndoa, Pudim flã, Bolo de chocolate, Arroz doce, Brigadeiro, gelatinas, frutas diversas. | Bebidas: Vinho branco e tinto, águas, sumos, cerveja, sangria. | Café: Amêndoa amarga, Porto, Bagaceira.",
-    price: "19.50",
-    category: "snacks"
-  },
 
-  // Eventos - Menus de Natal (por último)
-  {
-    name: "Menu 1 de Natal",
-    description: "Entradas: Pão, Manteiga, presunto fatiado, Queijinhos fatiados, Ovos mexidos com farinheira, Alheira c/picles. | Quentes: 1º Prato à escolha entre Lombo Assado no Forno com Batata Assada, Bacalhau Espiritual com Camarão, Massada de Garoupa com Camarão. | Bebidas: Água, Sumos, Sangria, cerveja, Vinhos: Tinto e branco. | Mesa de Sobremesas: Pudim flan, leite-creme, molotov, salada de frutas, Bolo de Chocolate, Bolo de Amêndoa.",
-    price: "30.00",
-    category: "snacks"
-  },
-  {
-    name: "Menu 2 de Natal",
-    description: "Entradas: Pão Manteiga / Pasta, Paté de atum, Queijinhos alentejanos, Salgadinhos diversos. | 1º Prato: Bacalhau folhado com saladinha francesa. | 2º Prato: Vitela à Lafões. | Bebidas: Água, Sumos, Sangria, cerveja, Vinhos: tinto e branco. | Sobremesas: Pudim flan, leite-creme, Salada de frutas, Bolo de Chocolate, Bolo de Amêndoa. | Café.",
-    price: "25.00",
-    category: "snacks"
-  }
+  // Placeholder para menus que serão exibidos como PDFs
+  // Os detalhes dos menus foram removidos conforme solicitado
 ];
 
 const Menu: React.FC = () => {
@@ -319,6 +284,79 @@ const Menu: React.FC = () => {
               <div className="p-4 bg-gray-50 rounded-lg">
                 <p className="font-semibold">NOTA:</p>
                 <p>O pagamento total será efectuado pelo responsável da marcação da mesa, não aceitamos pagamentos individuais.</p>
+              </div>
+              
+              {/* Menu Boxes */}
+              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-8">
+                <a 
+                  href="#" 
+                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px]"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    // Link para o PDF de Menus Universitários quando disponível
+                    // window.open('/files/menus_universitarios.pdf', '_blank');
+                    alert('PDF de Menus Universitários em breve disponível');
+                  }}
+                >
+                  <h3 className="text-xl font-bold text-primary mb-2">Menus Universitários</h3>
+                  <div className="text-sm text-gray-500 mt-2">Clique para ver o PDF</div>
+                </a>
+                
+                <a 
+                  href="#" 
+                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px]"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    // Link para o PDF de Menus de Aniversário quando disponível
+                    // window.open('/files/menus_aniversario.pdf', '_blank');
+                    alert('PDF de Menus de Aniversário em breve disponível');
+                  }}
+                >
+                  <h3 className="text-xl font-bold text-primary mb-2">Menus de Aniversário</h3>
+                  <div className="text-sm text-gray-500 mt-2">Clique para ver o PDF</div>
+                </a>
+                
+                <a 
+                  href="#" 
+                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px]"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    // Link para o PDF de Menus de Natal quando disponível
+                    // window.open('/files/menus_natal.pdf', '_blank');
+                    alert('PDF de Menus de Natal em breve disponível');
+                  }}
+                >
+                  <h3 className="text-xl font-bold text-primary mb-2">Menus de Natal</h3>
+                  <div className="text-sm text-gray-500 mt-2">Clique para ver o PDF</div>
+                </a>
+                
+                <a 
+                  href="#" 
+                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px]"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    // Link para o PDF de Menus de Batizado quando disponível
+                    // window.open('/files/menus_batizado.pdf', '_blank');
+                    alert('PDF de Menus de Batizado em breve disponível');
+                  }}
+                >
+                  <h3 className="text-xl font-bold text-primary mb-2">Menus de Batizado</h3>
+                  <div className="text-sm text-gray-500 mt-2">Clique para ver o PDF</div>
+                </a>
+                
+                <a 
+                  href="#" 
+                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center flex flex-col items-center justify-center min-h-[150px]"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    // Link para o PDF de Menus de Casamento quando disponível
+                    // window.open('/files/menus_casamento.pdf', '_blank');
+                    alert('PDF de Menus de Casamento em breve disponível');
+                  }}
+                >
+                  <h3 className="text-xl font-bold text-primary mb-2">Menus de Casamento</h3>
+                  <div className="text-sm text-gray-500 mt-2">Clique para ver o PDF</div>
+                </a>
               </div>
             </div>
           )}
