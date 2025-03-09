@@ -15,16 +15,20 @@ const Hero: React.FC = () => {
       alt: "Ambiente do Restaurante Cinderela"
     },
     {
-      src: "/images/436907319_7594177130643911_5218796424270003036_n.jpg",
-      alt: "Pastelaria Cinderela"
-    },
-    {
       src: "/images/470137426_9055215441206732_3026385478431515673_n.jpg",
       alt: "Restaurante Cinderela"
     },
     {
       src: "/images/118309576_4740694492611177_2643396005104335448_n.jpg",
       alt: "Especialidades da Pastelaria Cinderela"
+    },
+    {
+      src: "/images/67601808_2500248366703505_6405839161005178880_n.jpg",
+      alt: "Restaurante Cinderela"
+    },
+    {
+      src: "/images/436907319_7594177130643911_5218796424270003036_n.jpg",
+      alt: "Pastelaria Cinderela"
     },
     {
       src: "/images/Imagem WhatsApp 2025-03-04 às 22.25.37_dcbb5c26.jpg",

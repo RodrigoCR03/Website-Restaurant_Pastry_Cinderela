@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { X } from 'lucide-react';
-import { motion } from 'framer-motion';
+import React, { useState, useRef, useEffect } from 'react';
+import { X, ChevronDown, ChevronUp } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { fadeIn, staggerContainer, zoomIn } from '../utils/animations';
 
 const galleryImages = [
@@ -145,6 +145,12 @@ const galleryImages = [
 const Gallery: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const galleryRef = useRef<HTMLElement>(null);
+  const buttonRef = useRef<HTMLDivElement>(null);
+  
+  // Show only the first 12 images initially
+  const visibleImages = isExpanded ? galleryImages : galleryImages.slice(0, 12);
 
   const openModal = (src: string) => {
     setSelectedImage(src);
@@ -156,8 +162,41 @@ const Gallery: React.FC = () => {
     document.body.style.overflow = 'auto';
   };
 
+  const toggleExpand = () => {
+    // Store current scroll position before toggling
+    const currentScrollPosition = window.scrollY;
+    
+    setIsExpanded(prev => {
+      // If we're collapsing the gallery (going from expanded to collapsed)
+      if (prev) {
+        // We'll scroll to the button position after state update
+        setTimeout(() => {
+          if (buttonRef.current) {
+            const buttonPosition = buttonRef.current.getBoundingClientRect().top + window.scrollY - 100;
+            window.scrollTo({
+              top: buttonPosition,
+              behavior: 'smooth'
+            });
+          }
+        }, 100);
+      } else {
+        // If we're expanding, maintain the current scroll position
+        setTimeout(() => {
+          window.scrollTo({
+            top: currentScrollPosition,
+            behavior: 'auto'
+          });
+        }, 100);
+      }
+      return !prev;
+    });
+    
+    // Reset hovered state when toggling
+    setHoveredIndex(null);
+  };
+
   return (
-    <section id="gallery" className="py-16 bg-white">
+    <section id="gallery" className="py-16 bg-white" ref={galleryRef}>
       <div className="container mx-auto px-4">
         <motion.div 
           className="text-center mb-12"
@@ -174,39 +213,75 @@ const Gallery: React.FC = () => {
         
         <motion.div 
           className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4"
+          key={isExpanded ? 'expanded' : 'collapsed'}
           variants={staggerContainer}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
+          animate="visible"
+          viewport={{ once: false, margin: "-50px" }}
         >
-          {galleryImages.map((image, index) => (
-            <motion.div 
-              key={index} 
-              className="relative overflow-hidden rounded-lg shadow-md aspect-square cursor-pointer"
-              variants={zoomIn(0.1 * (index % 8))}
-              whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-              onClick={() => openModal(image.src)}
-            >
-              <img 
-                src={image.src} 
-                alt={image.alt} 
-                className="w-full h-full object-cover transition-transform duration-500"
-              />
-              {hoveredIndex === index && (
-                <motion.div 
-                  className="absolute inset-0 bg-primary bg-opacity-60 flex items-center justify-center p-4"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <p className="text-white text-center text-sm">{image.alt}</p>
-                </motion.div>
-              )}
-            </motion.div>
-          ))}
+          <AnimatePresence>
+            {visibleImages.map((image, index) => (
+              <motion.div 
+                key={`${image.src}-${index}`}
+                className="relative overflow-hidden rounded-lg shadow-md aspect-square cursor-pointer"
+                variants={zoomIn(0.1 * (index % 8))}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.3 }}
+                whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                onClick={() => openModal(image.src)}
+              >
+                <img 
+                  src={image.src} 
+                  alt={image.alt} 
+                  className="w-full h-full object-cover transition-transform duration-500"
+                />
+                {hoveredIndex === index && (
+                  <motion.div 
+                    className="absolute inset-0 bg-primary bg-opacity-60 flex items-center justify-center p-4"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <p className="text-white text-center text-sm">{image.alt}</p>
+                  </motion.div>
+                )}
+              </motion.div>
+            ))}
+          </AnimatePresence>
         </motion.div>
+        
+        {galleryImages.length > 12 && (
+          <motion.div 
+            className="flex justify-center mt-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            ref={buttonRef}
+          >
+            <motion.button
+              onClick={toggleExpand}
+              className="flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {isExpanded ? (
+                <>
+                  <span>Ver menos</span>
+                  <ChevronUp size={20} />
+                </>
+              ) : (
+                <>
+                  <span>Ver mais</span>
+                  <ChevronDown size={20} />
+                </>
+              )}
+            </motion.button>
+          </motion.div>
+        )}
       </div>
 
       {/* Modal for full-size image view */}

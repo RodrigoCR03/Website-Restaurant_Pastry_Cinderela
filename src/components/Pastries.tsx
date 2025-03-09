@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { fadeIn, staggerContainer, zoomIn } from '../utils/animations';
 
 const categories = [
   'Todos',
@@ -73,10 +74,11 @@ const Pastries: React.FC = () => {
     <section id="pastries" className="py-16 bg-light">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="text-center mb-12"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={fadeIn('up', 0.3)}
         >
           <h2 className="section-title">Pastelaria</h2>
           <p className="max-w-2xl mx-auto text-gray-600">
@@ -85,10 +87,17 @@ const Pastries: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="flex justify-center gap-4 mb-8 flex-wrap">
-          {categories.map((category) => (
+        <motion.div 
+          className="flex justify-center gap-4 mb-8 flex-wrap"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          {categories.map((category, index) => (
             <motion.button
               key={category}
+              variants={zoomIn(0.1 * index)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className={`px-4 py-2 rounded-full transition-colors duration-300 ${selectedCategory === category ? 'bg-secondary text-primary' : 'bg-white text-gray-600 hover:bg-gray-100'}`}
@@ -97,11 +106,15 @@ const Pastries: React.FC = () => {
               {category}
             </motion.button>
           ))}
-        </div>
+        </motion.div>
         
         <motion.div 
           layout
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 md:gap-8"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
         >
           <AnimatePresence>
             {filteredPastries.map((pastry, index) => (
@@ -112,6 +125,7 @@ const Pastries: React.FC = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.3 }}
+                variants={fadeIn(index % 2 === 0 ? 'right' : 'left', 0.2 * index)}
                 className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transform transition-all duration-300 hover:scale-105"
               >
                 <div className="relative pb-[75%] overflow-hidden">
@@ -123,25 +137,37 @@ const Pastries: React.FC = () => {
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.3 }}
                   />
+                  <motion.div 
+                    className="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-0 hover:opacity-30 transition-opacity duration-300"
+                    whileHover={{ opacity: 0.3 }}
+                  />
                 </div>
-                <div className="p-4">
+                <motion.div 
+                  className="p-4"
+                  variants={fadeIn('up', 0.1)}
+                >
                   <h3 className="text-xl font-bold text-primary mb-2">{pastry.name}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{pastry.description}</p>
-                  <div className="mt-2">
+                  <motion.div 
+                    className="mt-2"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.2 }}
+                  >
                     <span className="inline-block bg-light text-primary text-xs px-2 py-1 rounded">
                       {pastry.category}
                     </span>
-                  </div>
-                </div>
+                  </motion.div>
+                </motion.div>
               </motion.div>
             ))}
           </AnimatePresence>
         </motion.div>
         
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={fadeIn('up', 0.5)}
           className="mt-12 text-center"
         >
           <p className="text-gray-600 mb-6">
@@ -151,8 +177,9 @@ const Pastries: React.FC = () => {
           <motion.a
             href="#contact"
             className="btn-secondary inline-block"
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.05, boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)' }}
             whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.2 }}
           >
             Encomendar Pastelaria
           </motion.a>
