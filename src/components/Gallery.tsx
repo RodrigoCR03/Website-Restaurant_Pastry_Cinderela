@@ -128,7 +128,7 @@ const galleryImages = [
     alt: "Especialidades da Cinderela"
   },
   {
-    src: "/images/204011364_4252370664824591_3372468539489034191_n.jpg",
+    src: "/images/67601808_2500248366703505_6405839161005178880_n.jpg",
     alt: "Especialidades da Cinderela"
   },
   {
@@ -136,7 +136,7 @@ const galleryImages = [
     alt: "Especialidades da Cinderela"
   },
   {
-    src: "/images/183600892_4128708567190802_684146871855558555_n.jpg",
+    src: "/images/Captura de ecrã 2025-03-04 165447Mesa.png",
     alt: "Especialidades da Cinderela"
   },
 
